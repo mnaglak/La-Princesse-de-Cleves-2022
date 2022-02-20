@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> La Princesse de Clèves </title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <!-- Load Leaflet stylesheet and .js locally -->
+	<link rel="stylesheet" href="leaflet1_5_1/leaflet.css"/>
+	<script src="leaflet1_5_1/leaflet.js"></script>
+	<script src="jquery.min.js"> </script>
+
+  <!-- Load plugins locally (Pancontrol for panning and Ajax for .geojson import,
+	L.Control.Opacity for controlling the opacity of the background images,
+	Fontawesome for panel icons
+	sidebar-master-v2 for sidebars
+	-->
+
+	<link rel="stylesheet" href="Leaflet.Pancontrol/src/L.Control.Pan.css" />
+	<script src="Leaflet.Pancontrol/src/L.Control.Pan.js"></script>
+
+	<script src="./Leaflet.Control.Opacity/dist/L.Control.Opacity.js"></script>
+	<link href="./Leaflet.Control.Opacity/dist/L.Control.Opacity.css" rel="stylesheet" />
+
+	<script src="./fontawesome/js/all.js"></script>
+	<link href="./fontawesome/css/all.css" rel="stylesheet" />
+
+	<script src="./Leaflet.PolylineDecorator-master/dist/leaflet.polylineDecorator.js"></script>
+
+	<link rel="stylesheet" href="./leaflet-sidebar-v2-master/css/leaflet-sidebar.css" />
+	<script src="./leaflet-sidebar-v2-master/js/leaflet-sidebar.js"></script>
+
+	<link href="./Leaflet.fullscreen/dist/leaflet.fullscreen.css" rel="stylesheet" />
+	<script src="./Leaflet.fullscreen/dist/Leaflet.fullscreen.min.js"></script>
+  <link rel="stylesheet" href="./leaflet-search-master/src/leaflet-search.css" />
+  <script src="./leaflet-search-master/src/leaflet-search.js"></script>
+	<!-- Load Map Stylesheet locally -->
+	<link rel="stylesheet" type="text/css" href="Princesse.css">
+  <script type="text/javascript" src="./movement.js"></script>
+	</head>
+
+<body>
+	<!-- create map object, create slider object, and call map .js file -->
+	<div id = "map" >
+	<!--<div id = "box1" class= "box"></div>-->
+	</div>
+
+	<!-- removed timeline to use dropdown box instead
+	<form class="slidersettings">
+		<div class="source box">
+		<div class="title">Character Movement by Part</div>
+		<div id="slider"></div>
+		</div>
+	</form> -->
+
+	<script type="text/javascript" src="princesse2022.js"></script>
+
+</body>
+</html>
