@@ -49,7 +49,7 @@
     //Note that these last 3 have a "pane" that is definined in their options. This is so that they will appear beneath the smaller maps instead of on top
     //See just above for the z values of the different panes
     	var ileDeFrance1598 = L.tileLayer('./tiledMaps/1598/{z}/{x}/{y}.png', {tms: true, pane: 'iledeFrance', attribution: "", minZoom: 9, maxZoom: 13});
-    	var france1570 = L.tileLayer('./tiledMaps/1570/{z}/{x}/{y}.png', {tms: true, pane: 'france', attribution: "", minZoom: 6, maxZoom: 10});
+    	var france1570 = L.tileLayer('./tiledMaps/1570/{z}/{x}/{y}.png', {tms: true, pane: 'france', attribution: "", minZoom: 6, maxZoom: 10}).addTo(map);
     	var europe1644 = L.tileLayer('./tiledMaps/1644/{z}/{x}/{y}.png', {tms: true, pane: 'europe', attribution: "", minZoom: 1, maxZoom: 8});
 
 
@@ -453,6 +453,7 @@ map.addControl( searchControlPeople );
 			map.on('click', function() {
 				sidebarLeft.close();
 				louvre.setIcon(blueIcon);
+				reims.setIcon(blueIcon);
 				coulommiers.setIcon(blueIcon);
 				cateauCambrésis.setIcon(blueIcon);
 				leCercamp.setIcon(blueIcon);
@@ -489,6 +490,7 @@ map.addControl( searchControlPeople );
 					position: 'top'
 					});
 					louvre.setIcon(blueIcon);
+					reims.setIcon(blueIcon);
 					coulommiers.setIcon(blueIcon);
 					cateauCambrésis.setIcon(blueIcon);
 					leCercamp.setIcon(blueIcon);
@@ -537,6 +539,7 @@ map.addControl( searchControlPeople );
 						palaisDesTournelles.setIcon(blueIcon);
 						hotels.setIcon(blueIcon);
 						hotels2.setIcon(blueIcon);
+						reims.setIcon(blueIcon);
 					});
 
 			function louvrecontent() {
@@ -574,6 +577,7 @@ map.addControl( searchControlPeople );
 						palaisDesTournelles.setIcon(blueIcon);
 						hotels.setIcon(greenIcon);
 						hotels2.setIcon(greenIcon);
+						reims.setIcon(blueIcon);
 					});
 
 				var hotels2 = L.marker([48.85678111084862, 2.3626613616943364]);
@@ -599,6 +603,7 @@ map.addControl( searchControlPeople );
 						palaisDesTournelles.setIcon(blueIcon);
 						hotels.setIcon(greenIcon);
 						hotels2.setIcon(greenIcon);
+						reims.setIcon(blueIcon);
 					});
 
 
@@ -640,11 +645,12 @@ map.addControl( searchControlPeople );
 						palaisDesTournelles.setIcon(blueIcon);
 						hotels.setIcon(blueIcon);
 						hotels2.setIcon(blueIcon);
+						reims.setIcon(blueIcon);
 					});
 
 				function coulommierscontent() {
 					popupContent = "<center><h1>Coulommiers</h1></center><br>La ville de Coulommiers se situe à peu près à 54 km de Paris, dans la région de l’Île-de-France. En 1613, la duchesse de Longueville, la nièce de Jacques de Clèves (sur qui le personnage fictif du Prince de Clèves est basé), ordonne à l’architecte Salomon de Brosse de construire un château à Coulommiers. Dans le roman La Princesse de Clèves, c’est à Coulommiers que la Princesse de Clèves fait le fameux aveu à son mari. Le château est détruit au XVIIIe siècle, mais des vestiges se trouvent aujourd’hui dans le Parc des Capucins.<br><br><br>"+
-					"<center><h1>Coulommiers</h1></center><br>The town of Coulommiers is located nearly 54 km from Paris, in the Île-de-France region. In 1613, the duchess of Longueville, the niece of Jacques de Clèves (upon whom the fictional character of the Prince de Clèves is based), ordered the architect Salomon de Brosse to construct a castle at Coulommiers. In the novel, it is at Coulommiers that the Princesse de Clèves makes her famous confession to her husband. The castle was destroyed in the eighteenth century, but its ruins can be found in the present-day Parc des Capucins."	
+					"<center><h1>Coulommiers</h1></center><br>The town of Coulommiers is located nearly 54 km from Paris, in the Île-de-France region. In 1613, the duchess of Longueville, the niece of Jacques de Clèves (upon whom the fictional character of the Prince de Clèves is based), ordered the architect Salomon de Brosse to construct a castle at Coulommiers. In the novel, it is at Coulommiers that the Princesse de Clèves makes her famous confession to her husband. The castle was destroyed in the eighteenth century, but its ruins can be found in the present-day Parc des Capucins."
 
 					return popupContent;
 				};
@@ -674,6 +680,7 @@ map.addControl( searchControlPeople );
 						palaisDesTournelles.setIcon(blueIcon);
 						hotels.setIcon(blueIcon);
 						hotels2.setIcon(blueIcon);
+						reims.setIcon(blueIcon);
 					});
 
 				function cateauCambrésiscontent() {
@@ -707,6 +714,7 @@ map.addControl( searchControlPeople );
 						palaisDesTournelles.setIcon(blueIcon);
 						hotels.setIcon(blueIcon);
 						hotels2.setIcon(blueIcon);
+						reims.setIcon(blueIcon);
 					});
 
 				function leCercampcontent() {
@@ -740,10 +748,11 @@ map.addControl( searchControlPeople );
 						palaisDesTournelles.setIcon(blueIcon);
 						hotels.setIcon(blueIcon);
 						hotels2.setIcon(blueIcon);
+						reims.setIcon(blueIcon);
 					});
 
 				function chantillycontent() {
-					popupContent = "<center><h1>Chantilly</h1><center><br>Le château de Chantilly se situe à environ 39 km de Paris, dans la région des Hauts-de-France (nord). Au moyen âge, le château est d’abord conçu comme une forteresse. Comme l’insinue La Princesse de Clèves, le connétable Anne de Montmorency possède le domaine du Château de Chantilly tout au long du XVIe siècle. De 1557 à 1558, l’architecte Jean Bullant fait agrandir le château en construisant le « Petit Château » à côté du bâtiment ancien, dit le « Grand Château ». Au XVIIe siècle, le château devient la propriété de la famille de Bourbon. Louis II de Bourbon (appelé le Grand Condé) y invite des artistes et des écrivains célèbres, dont Molière, Racine et La Fontaine. Il demande à André Le Nôtre, le jardinier du roi Louis XIV, de dessiner les jardins du château. Le « Grand Château » est détruit pendant la Révolution et reconstruit vers la fin du XIXe siècle sous l’ordre d’Henri d’Orléans, fils de l’ancien roi Louis-Philippe. Aujourd’hui, le château abrite le musée de Condé qui expose les collections d’art et de livres d’Henri d’Orléans.<br><br><br>"+
+					popupContent = "<center><h1>Chantilly</h1></center><br>Le château de Chantilly se situe à environ 39 km de Paris, dans la région des Hauts-de-France (nord). Au moyen âge, le château est d’abord conçu comme une forteresse. Comme l’insinue La Princesse de Clèves, le connétable Anne de Montmorency possède le domaine du Château de Chantilly tout au long du XVIe siècle. De 1557 à 1558, l’architecte Jean Bullant fait agrandir le château en construisant le « Petit Château » à côté du bâtiment ancien, dit le « Grand Château ». Au XVIIe siècle, le château devient la propriété de la famille de Bourbon. Louis II de Bourbon (appelé le Grand Condé) y invite des artistes et des écrivains célèbres, dont Molière, Racine et La Fontaine. Il demande à André Le Nôtre, le jardinier du roi Louis XIV, de dessiner les jardins du château. Le « Grand Château » est détruit pendant la Révolution et reconstruit vers la fin du XIXe siècle sous l’ordre d’Henri d’Orléans, fils de l’ancien roi Louis-Philippe. Aujourd’hui, le château abrite le musée de Condé qui expose les collections d’art et de livres d’Henri d’Orléans.<br><br><br>"+
 					"<center><h1>Chantilly</h1></center><br>The Chateau de Chantilly is located about 39 km from Paris, in the Hauts-de-France region. The castle was constructed as a fortress during the Middle Ages. As La Princesse de Clèves suggests, the Connétable Anne de Montmorency owned the estate of the Chateau de Chantilly during the majority of the sixteenth century. From 1557 to 1558, the architect Jean Bullant expanded the castle by constructing the “Petit Chateau” next to the old building, called the “Grand Chateau.” During the seventeenth century, the castle became the property of the Bourbon family. Louis II de Bourbon (known as the Great Condé) invited famous artists and writers, such as Molière, Racine, and La Fontaine to the castle; in addition, he requested that André Le Nôtre, the gardener of King Louis XIV, design the castle’s gardens. The “Grand Chateau” was destroyed during the French Revolution and reconstructed toward the end of the nineteenth century under the orders of Henri d’Orléans, the son of the former king Louis-Philippe. Today the castle houses the Condé museum which exhibits the art and book collections of Henri d’Orléans.";
 					return popupContent;
 				};
@@ -772,6 +781,7 @@ map.addControl( searchControlPeople );
 						palaisDesTournelles.setIcon(blueIcon);
 						hotels.setIcon(blueIcon);
 						hotels2.setIcon(blueIcon);
+						reims.setIcon(blueIcon);
 					});
 
 				function bloiscontent() {
@@ -779,7 +789,38 @@ map.addControl( searchControlPeople );
 					"<center><h1>Blois</h1></center><br>The Chateau de Blois is located in the region of Centre-Val de Loire, around 160 km from Paris. In the ninth century, the beginnings of the future Chateau de Blois (including a fortress, a chapel, and towers) were constructed. In 1429, Joan of Arc became a military leader (chef de guerre) at Blois before going to lift the siege of Orleans. King Louis XII (1498-15) ordered the transformation of the fortress into a castle in the Gothic style. King François I (r. 1515-47) requested the construction of a new wing of the castle and in 1524, Queen Claude de France, his wife, died at Blois. King Henri II, as well as his sons King François II, King Charles IX, and King Henri III, stayed at the Chateau de Blois often. In December of 1588, the oldest son and one of the younger sons of Duke François de Guise were assassinated at Blois; in January of 1589, Catherine de Medici died there as well. The castle expanded again under the direction of Gaston d’Orléans (1608-60), the younger brother and presumptive heir of King Louis XIII before the birth of the future King Louis XIV. At this time, the architect François Mansart constructed a new part of the castle incorporating elements of Classical architecture. After being abandoned, the castle was restored starting in the nineteenth century and today contains an art museum.";
 					return popupContent;
 				};
+		//Reims
 
+		var reims = L.marker([49.1781125831520, 3.9413452148437504]);
+		reims.bindTooltip("Reims").openTooltip();
+		reims.on("click", function (e) {
+			reimscontent();
+			sidebarLeft.removePanel('popupCont');
+					sidebarLeft.addPanel({
+						id: 'popupCont',                     // UID, used to access the panel
+						tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
+						pane: popupContent,        // DOM elements can be passed, too
+						title: 'Reims',              // an optional pane header
+						position: 'top'
+					});
+					sidebarLeft.open('popupCont');
+					reims.setIcon(greenIcon);
+					coulommiers.setIcon(blueIcon);
+					louvre.setIcon(blueIcon);
+					cateauCambrésis.setIcon(blueIcon);
+					leCercamp.setIcon(blueIcon);
+					chantilly.setIcon(blueIcon);
+					blois.setIcon(blueIcon);
+					chambord.setIcon(blueIcon);
+					palaisDesTournelles.setIcon(blueIcon);
+					hotels.setIcon(blueIcon);
+					hotels2.setIcon(blueIcon);
+				});
+				function reimscontent() {
+					popupContent = "<center><h1>Reims</h1></center><br>La ville de Reims est située à environ 130 km de Paris, dans la région Grand Est. Clovis, le premier roi des Francs, est baptisé à Reims vers 498. En 816, Louis le Pieux, fils de Charlemagne, vient à Reims pour être sacré. L’actuelle cathédrale Notre-Dame de Reims est construite au XIIIe siècle, dans un style gothique qui comprend des arcs-boutants, des vitraux élaborés et plus de 2 300 statues. C’est à cette cathédrale que les sacres de la plupart des rois de France de Louis VIII (1223-1226) à Charles X (1825-1830) ont lieu, dont celui de Charles VII qui est conduit d’Orléans à Reims par Jeanne d’Arc. Pendant la Première Guerre mondiale, la cathédrale subit des bombardements allemands et est partiellement détruite. La cathédrale est restaurée après la Première Guerre mondiale sous les ordres de l’architecte Henri Deneux, et la restauration inclut quelques nouveaux vitraux de l’artiste Marc Chagall.<br><br><br>" +
+					"<center><h1>Reims</h1></center><br>The city of Reims is located about 130 km from Paris, in the Grand Est region. Clovis, the first king of the Franks, was baptized at Reims around 498; in 816, Louis le Pieux, a son of Charlemagne, came to Reims to be crowned king. The current Notre-Dame de Reims Cathedral was constructed in the thirteenth century, in a Gothic style that incorporated flying buttresses, complex stained-glass windows, and more than 2,300 statues. The coronations of the majority of the kings of France from Louis VIII (1223-26) to Charles X (1825-30) took place at the Notre-Dame de Reims Cathedral, including the coronation of Charles VII, who was accompanied from Orleans to Reims by Joan of Arc. During WWI, the cathedral was bombed by Germany and was partially destroyed. The team of the architect Henri Deneux restored the cathedral, with a few new stained-glass windows by the artist Marc Chagall.";
+					return popupContent;
+				};
 		//chambord
 				var chambord = L.marker([47.94762618352869,1.1343383789062502]);
 				chambord.bindTooltip("Chambord").openTooltip();
@@ -804,6 +845,7 @@ map.addControl( searchControlPeople );
 						palaisDesTournelles.setIcon(blueIcon);
 						hotels.setIcon(blueIcon);
 						hotels2.setIcon(blueIcon);
+						reims.setIcon(blueIcon);
 					});
 
 				function chambordcontent() {
@@ -836,6 +878,7 @@ map.addControl( searchControlPeople );
 						palaisDesTournelles.setIcon(greenIcon);
 						hotels.setIcon(blueIcon);
 						hotels2.setIcon(blueIcon);
+						reims.setIcon(blueIcon);
 					});
 
 				function palaisDesTournellescontent() {
@@ -847,13 +890,7 @@ map.addControl( searchControlPeople );
 
 
 		//	merging of these sites for turning on/off
-				var pointsOfFocus = L.layerGroup([louvre, coulommiers, chantilly, cateauCambrésis, leCercamp, blois, chambord, palaisDesTournelles, hotels, hotels2]).addTo(map);
-
-
-
-
-
-
+				var pointsOfFocus = L.layerGroup([reims,louvre, coulommiers, chantilly, cateauCambrésis, leCercamp, blois, chambord, palaisDesTournelles, hotels, hotels2]).addTo(map);
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -902,3 +939,11 @@ map.addControl( searchControlPeople );
 				position: 'topright',
 				collapsed: true} //if we want the opacity box to be collapsed or not. We can do the same thing for the control layers box if desired
 				).addTo(map);
+
+				//Function to see map coordinates in console on click
+						map.on('click', function(e){
+							var coord = e.latlng;
+							var lat = coord.lat;
+							var lng = coord.lng;
+							console.log("You clicked the map at latitude: " + lat + " and longitude: " + lng);
+						});
