@@ -1,5 +1,5 @@
 
-//This is where you define the map start up options, here defined to center on Paris and to have a particular zoom. 
+//This is where you define the map start up options, here defined to center on Paris and to have a particular zoom.
 	var mapOptions = {
 		center: [48.86, 2.33],
 		zoom: 10,
@@ -7,14 +7,14 @@
 		minZoom: 4
 	}
 
-//This creates the map variable itself based on the options set above	
-	var map = new L.map('map', mapOptions); 
+//This creates the map variable itself based on the options set above
+	var map = new L.map('map', mapOptions);
 
 //Sidebar creation
 	var sidebarLeft = L.control.sidebar({position:"left"}).addTo(map);
 
 
-//This is where I have begun to create the legend, defining characters with their colors. 
+//This is where I have begun to create the legend, defining characters with their colors.
 	var princess = "<b>Princesse de Clèves</b>";
 	var colorPrincess = princess.fontcolor("#e931be"); //pink
 	var prince = "<b>Prince de Clèves</b>";
@@ -25,7 +25,7 @@
 	var colorCour = laCour.fontcolor("#A04000"); //brown
 	var henri = "<b>Herni II</b>";
 	var colorHenri = henri.fontcolor("#000000"); //black
-	var elisabeth = "<b>Élisabeth de France</b>"; 
+	var elisabeth = "<b>Élisabeth de France</b>";
 	var colorElisabeth = elisabeth.fontcolor("#85C1E9"); //light blue
 	var vidame= "<b>Vidame de Chartres</b>";
 	var vidameColor = vidame.fontcolor("#9AFF00"); //bright green
@@ -55,11 +55,11 @@
 	var colorEspagne = espagne.fontcolor("#00FFA4"); //aqua-blue
 	var gentilhomme = "<b>Gentilhomme</b>";
 	var colorGentilhomme = gentilhomme.fontcolor("#1D8348");
-	
+
 	//This will eventually create the legend will all associated information
-	var legendContent =  colorPrincess + "<br>" + colorPrince + "<br>" + colorNemours + "<br>" + colorCour + "<br>" + colorHenri + "<br>" + colorElisabeth + "<br>" + vidameColor + "<br>" 
-	+ colorConnetableMont + "<br>" + colorMarechal + "<br>" + colorLorraine + "<br>" + colorConde + "<br>" + colorRoiNavarre + "<br>" 
-	+ colorSavoie + "<br>" + colorAlbe + "<br>" + colorMartigues + "<br>" + colorRadan + "<br>" + colorLignerolles + "<br>" + colorBourbon + "<br>" + colorEspagne + "<br>" + colorGentilhomme;	
+	var legendContent =  colorPrincess + "<br>" + colorPrince + "<br>" + colorNemours + "<br>" + colorCour + "<br>" + colorHenri + "<br>" + colorElisabeth + "<br>" + vidameColor + "<br>"
+	+ colorConnetableMont + "<br>" + colorMarechal + "<br>" + colorLorraine + "<br>" + colorConde + "<br>" + colorRoiNavarre + "<br>"
+	+ colorSavoie + "<br>" + colorAlbe + "<br>" + colorMartigues + "<br>" + colorRadan + "<br>" + colorLignerolles + "<br>" + colorBourbon + "<br>" + colorEspagne + "<br>" + colorGentilhomme;
 
 
 //panel creations for left sidebar
@@ -76,8 +76,8 @@
 
 //Sets the initial left sidebar content for popup pane and sites of interest pane
 	var popupContent = 'Click on a location on the map to receive more information';
-	
-	var sitesContent = 'Click on one of the following sites to zoom to the desired location' + 
+
+	var sitesContent = 'Click on one of the following sites to zoom to the desired location' +
 		'<br>' + "<a id='myLink' href='#' onclick='goTo(48.860352821094246, 2.3385858535766606, 15)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Le Louvre</b><br><a id='myLink' href='#' onclick='goTo(48.85736700174229,2.3655581474304204, 17)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Le Palais des Tournelles</b><br><a id='myLink' href='#' onclick='goTo(48.85918110234517, 2.3500013351440434, 14)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Hôtels particuliers</b><br><a id='myLink' href='#' onclick='goTo(48.72358515157852, 3.0514526367187504, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Coulommiers</b><br><a id='myLink' href='#' onclick='goTo(48.058348493290794,1.1604309082031252, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Blois</b><br><a id='myLink' href='#' onclick='goTo(50.0289165635219, 4.084167480468751, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Cateau-Cambrésis</b><br><a id='myLink' href='#' onclick='goTo(50.24720490139267, 2.6312255859375004, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Cercamp</b><br><a id='myLink' href='#' onclick='goTo(47.94762618352869,1.1343383789062502, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Chambord</b><br><a id='myLink' href='#' onclick='goTo(49.19483004925347, 2.4860000610351567, 13)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Chantilly</b>";
 
 
@@ -153,7 +153,7 @@
 		hotels2.setIcon(blueIcon);
 		});
 
-//definition of blue and green icons		
+//definition of blue and green icons
 	var greenIcon = L.icon({
 		iconUrl: './Images/marker-icon-green.png',
 		iconSize: [25, 41],
@@ -161,11 +161,11 @@
 		popupAnchor: [1, -34],
 		shadowSize: [41, 41]
 		});
-		
+
 	var blueIcon = L.icon({
 		iconUrl: './Images/marker-icon-blue.png'
 		});
-		
+
 //when left sidebar closes, reset sidebar content to what appears on opening in pop up pane, and reset map icons
 	sidebarLeft.on('closing', function(e) {
 		resetSidebarContent();
@@ -175,7 +175,7 @@
 			tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 			pane: popupContent,        // DOM elements can be passed, too
 			title: 'Additional Information',              // an optional pane header
-			position: 'top'        			
+			position: 'top'
 			});
 			louvre.setIcon(blueIcon);
 			coulommiers.setIcon(blueIcon);
@@ -197,9 +197,9 @@
 
 
 
-//Here is where the marker creation takes place and the content for the popup content will be set 
+//Here is where the marker creation takes place and the content for the popup content will be set
 //The lat/long for a particular point can be found either online or by opening the console box of the map and clicking the desired spot
-			
+
 //Image and Text in sidebar
 
 //for the Louvre marker
@@ -213,7 +213,7 @@
 					tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 					pane: popupContent,        // DOM elements can be passed, too
 					title: 'Le Louvre',              // an optional pane header
-					position: 'top'        			
+					position: 'top'
 				});
 				sidebarLeft.open('popupCont');
 				louvre.setIcon(greenIcon);
@@ -227,17 +227,17 @@
 				hotels.setIcon(blueIcon);
 				hotels2.setIcon(blueIcon);
 			});
-			
+
 	function louvrecontent() {
 			popupContent = "<b> I am a sketch of the Le Louvre from the past </b>"
 			+ "<br>" + "<img src='./Images/Fig. 1 Louvre Israel Silvestre.jpeg' width=100%/>" + "<br>" + "See my metadata " + "<a target='_blank' href=''>here</a>" + "<br>" +
 			"<i>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet </i>"
-			+ "<br>" + "<br>" + 
-			"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet";		
+			+ "<br>" + "<br>" +
+			"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet";
 
 			return popupContent;
 	};
-	
+
 //for hotels
 		var hotels = L.marker([48.860875144709475, 2.3408818244934086]);
 		hotels.bindTooltip("Hôtels particuliers").openTooltip();
@@ -249,7 +249,7 @@
 					tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 					pane: popupContent,        // DOM elements can be passed, too
 					title: 'Hôtels particuliers',              // an optional pane header
-					position: 'top'        			
+					position: 'top'
 				});
 				sidebarLeft.open('popupCont');
 				coulommiers.setIcon(blueIcon);
@@ -263,7 +263,7 @@
 				hotels.setIcon(greenIcon);
 				hotels2.setIcon(greenIcon);
 			});
-			
+
 		var hotels2 = L.marker([48.85678111084862, 2.3626613616943364]);
 		hotels2.bindTooltip("Hôtels particuliers").openTooltip();
 			hotels2.on("click", function (e) {
@@ -274,7 +274,7 @@
 					tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 					pane: popupContent,        // DOM elements can be passed, too
 					title: 'Hôtels particuliers',              // an optional pane header
-					position: 'top'        			
+					position: 'top'
 				});
 				sidebarLeft.open('popupCont');
 				coulommiers.setIcon(blueIcon);
@@ -287,20 +287,20 @@
 				palaisDesTournelles.setIcon(blueIcon);
 				hotels.setIcon(greenIcon);
 				hotels2.setIcon(greenIcon);
-			});	
-			
-			
+			});
+
+
 		function hotelscontent() {
 			popupContent = "<b> I am Hôtels particuliers</b>";
 
 			return popupContent;
 		};
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 
 //for Coulommiers
 		var coulommiers= L.marker([48.72358515157852, 3.0514526367187504]);
@@ -313,7 +313,7 @@
 					tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 					pane: popupContent,        // DOM elements can be passed, too
 					title: 'Coulommiers',              // an optional pane header
-					position: 'top'        			
+					position: 'top'
 				});
 				sidebarLeft.open('popupCont');
 				coulommiers.setIcon(greenIcon);
@@ -327,11 +327,11 @@
 				hotels.setIcon(blueIcon);
 				hotels2.setIcon(blueIcon);
 			});
-			
+
 		function coulommierscontent() {
 			popupContent = "<b> I am Coulommiers</b>"
 			+ "<br>" + "<img src='./Images/Coulommiers_vers_1600.JPG' width=100%/>"+ "<br>" + "See my metadata " + "<a target='_blank' href=''>here</a>" + "<br>" +
-			"I am also Coulommiers" + "<br>" + "<img src='./Images/Prospect_du_Chasteau_de_Coulommiers_en_Brie.jpg' width=100%/>" 
+			"I am also Coulommiers" + "<br>" + "<img src='./Images/Prospect_du_Chasteau_de_Coulommiers_en_Brie.jpg' width=100%/>"
 			+"<br>" + "See my metadata " + "<a target='_blank' href=''>here</a>";
 
 			return popupContent;
@@ -349,7 +349,7 @@ var cateauCambrésis = L.marker([50.0289165635219, 4.084167480468751]);
 					tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 					pane: popupContent,        // DOM elements can be passed, too
 					title: 'Cateau-Cambrésis',              // an optional pane header
-					position: 'top'        			
+					position: 'top'
 				});
 				sidebarLeft.open('popupCont');
 				coulommiers.setIcon(blueIcon);
@@ -363,14 +363,14 @@ var cateauCambrésis = L.marker([50.0289165635219, 4.084167480468751]);
 				hotels.setIcon(blueIcon);
 				hotels2.setIcon(blueIcon);
 			});
-		
+
 		function cateauCambrésiscontent() {
 			popupContent = "<b> I am Cateau-Cambrésis! I will have content soon! <b>";
 			return popupContent;
 		};
 
 
-//for Cercamp 
+//for Cercamp
 var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 	leCercamp.bindTooltip("Cercamp").openTooltip();
 	leCercamp.on("click", function (e) {
@@ -381,7 +381,7 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 					tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 					pane: popupContent,        // DOM elements can be passed, too
 					title: 'Cercamp',              // an optional pane header
-					position: 'top'        			
+					position: 'top'
 				});
 				sidebarLeft.open('popupCont');
 				coulommiers.setIcon(blueIcon);
@@ -395,7 +395,7 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 				hotels.setIcon(blueIcon);
 				hotels2.setIcon(blueIcon);
 			});
-		
+
 		function leCercampcontent() {
 			popupContent = "<b> I am Cercamp! I will have content soon! <b>";
 			return popupContent;
@@ -413,7 +413,7 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 					tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 					pane: popupContent,        // DOM elements can be passed, too
 					title: 'Chantilly',              // an optional pane header
-					position: 'top'        			
+					position: 'top'
 				});
 				sidebarLeft.open('popupCont');
 				coulommiers.setIcon(blueIcon);
@@ -427,13 +427,13 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 				hotels.setIcon(blueIcon);
 				hotels2.setIcon(blueIcon);
 			});
-		
+
 		function chantillycontent() {
 			popupContent = "<b> I am Chantilly! I will have content soon! <b>";
 			return popupContent;
 		};
 
-//for blois 
+//for blois
 		var blois = L.marker([48.058348493290794,1.1604309082031252]);
 		blois.bindTooltip("Blois").openTooltip();
 		blois.on("click", function (e) {
@@ -444,7 +444,7 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 					tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 					pane: popupContent,        // DOM elements can be passed, too
 					title: 'Blois',              // an optional pane header
-					position: 'top'        			
+					position: 'top'
 				});
 				sidebarLeft.open('popupCont');
 				coulommiers.setIcon(blueIcon);
@@ -458,7 +458,7 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 				hotels.setIcon(blueIcon);
 				hotels2.setIcon(blueIcon);
 			});
-		
+
 		function bloiscontent() {
 			popupContent = "<b> I am Blois! I will have content soon! <b>";
 			return popupContent;
@@ -475,7 +475,7 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 					tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 					pane: popupContent,        // DOM elements can be passed, too
 					title: 'Chambord',              // an optional pane header
-					position: 'top'        			
+					position: 'top'
 				});
 				sidebarLeft.open('popupCont');
 				coulommiers.setIcon(blueIcon);
@@ -489,7 +489,7 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 				hotels.setIcon(blueIcon);
 				hotels2.setIcon(blueIcon);
 			});
-		
+
 		function chambordcontent() {
 			popupContent = "<b> I am Chambord! I will have content soon! <b>";
 			return popupContent;
@@ -506,7 +506,7 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 					tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 					pane: popupContent,        // DOM elements can be passed, too
 					title: 'Le Palais des Tournelles',              // an optional pane header
-					position: 'top'        			
+					position: 'top'
 				});
 				sidebarLeft.open('popupCont');
 				coulommiers.setIcon(blueIcon);
@@ -520,14 +520,14 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 				hotels.setIcon(blueIcon);
 				hotels2.setIcon(blueIcon);
 			});
-		
+
 		function palaisDesTournellescontent() {
 			popupContent = "<b> I am Le Palais des Tournelles! I will have content soon! <b>";
 			return popupContent;
 		};
-		
-			
-			
+
+
+
 //	merging of these sites for turning on/off
 		var pointsOfFocus = L.layerGroup([louvre, coulommiers, chantilly, cateauCambrésis, leCercamp, blois, chambord, palaisDesTournelles, hotels, hotels2]).addTo(map);
 
@@ -539,42 +539,42 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 			var lng = coord.lng;
 			console.log("You clicked the map at latitude: " + lat + " and longitude: " + lng);
 		});
-		
+
 
 
 
 
 //Setting map underlays in specific z-order. The lower the number, the lower down the map will appear.
-//Here it is set up so that the modern imagery is the lowest, followed by the europe imagery, followed by the france imagery, etc. 
-//Just below, when the layers are imported, you'll see that some are put in a specific pane so they don't cover up smaller ones.	
+//Here it is set up so that the modern imagery is the lowest, followed by the europe imagery, followed by the france imagery, etc.
+//Just below, when the layers are imported, you'll see that some are put in a specific pane so they don't cover up smaller ones.
 		map.createPane('modern');
 		map.getPane('modern').style.zIndex = 140;
-			
+
 		map.createPane('iledeFrance');
 		map.getPane('iledeFrance').style.zIndex = 150;
 
 		map.createPane('france');
 		map.getPane('france').style.zIndex = 145;
-	
+
 		map.createPane('europe');
-		map.getPane('europe').style.zIndex = 143;	
+		map.getPane('europe').style.zIndex = 143;
 
 
 //Here is where we bring in the different map underlays
 //This first is the modern world imagery, currently called from arcGIS online.
 	var esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 		pane :'modern', attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-		}).addTo(map); 
-		
-	
+		}).addTo(map);
+
+
 //Now we start calling our locally stored and created Tile Maps. For how to tile a map, see the tiling instructions in the tutorial
 //Note that some have .addTo(map) on the end. This means they will appear when the map is initially loaded
-//You can also set the min/max zoom for these maps, though this is also relient upon actually having made tiles at these zoom levels 
+//You can also set the min/max zoom for these maps, though this is also relient upon actually having made tiles at these zoom levels
 	var paris1578 = L.tileLayer('./tiledMaps/1578/{z}/{x}/{y}.png', {tms: true, attribution: "", minZoom: 12, maxZoom: 18}).addTo(map);
 	var paris1615 = L.tileLayer('./tiledMaps/1615/{z}/{x}/{y}.png', {tms: true, attribution: "", minZoom: 11, maxZoom: 16});
 	var paris1652 = L.tileLayer('./tiledMaps/1652/{z}/{x}/{y}.png', {tms: true, attribution: "", minZoom: 9, maxZoom: 25});
 	var paris1675 = L.tileLayer('./tiledMaps/1675/{z}/{x}/{y}.png', {tms: true, attribution: "", minZoom: 9, maxZoom: 16}).addTo(map);
-	
+
 //Note that these last 3 have a "pane" that is definined in their options. This is so that they will appear beneath the smaller maps instead of on top
 //See just above for the z values of the different panes
 	var ileDeFrance1598 = L.tileLayer('./tiledMaps/1598/{z}/{x}/{y}.png', {tms: true, pane: 'iledeFrance', attribution: "", minZoom: 9, maxZoom: 13}).addTo(map);
@@ -586,7 +586,7 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 //This also tells the pop up boxes to come up on each feature (see fuction popup below)
 //As well as to swap the style for each line according to the book/character attributes of the geojson
 	var movement =  new L.GeoJSON.AJAX("PdCMovement_all.geojson", {
-		
+
 		//this will eventually be removed when fully integrated into the sidebar with no popup boxes on the map, only swapstyle will be left
 		onEachFeature: function (feature, layer) {
 			var out = [];
@@ -599,7 +599,7 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 						out.push(key+": "+f.properties[key]); //pushes out .geoJSON attributes exported from ArcGIS
 					}*/
 				}
-			layer.bindPopup(out.join("<br />"));		
+			layer.bindPopup(out.join("<br />"));
 		},
 		style: swapStyle
 	});
@@ -614,7 +614,7 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 	var baseLayers = {
 		"Modern Imagery" : esri_WorldImagery
 		};
-	
+
 
 //Maps put in the overlayMaps variable are check boxes, meaning any variety of them can be turned on at a time
 //Right now it includes all the other maps we have imported, as well as our Points of Focus icon group
@@ -636,7 +636,7 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 
 
 
-//Function sets a particular color and style for each character and part of the book	
+//Function sets a particular color and style for each character and part of the book
 	function swapStyle(feature) {
 		if (feature.properties.Book_Part === 1) {
 				switch (feature.properties.Character) {
@@ -658,11 +658,11 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 					case 'Roi de Navarre': return {color: "#C1C1BF"}; //grey
 					case 'Prince de Condé': return {color: "#F2F772"}; //light yellow
 					case 'Élisabeth de France': return {color: "#85C1E9"}; //light blue
-					case 'Gentilhomme': return {color: "#1D8348"}; //dark green 
+					case 'Gentilhomme': return {color: "#1D8348"}; //dark green
 					case 'Madame de Martigues': return {color: "#FAD7A0"}; //peach
 				}
 			}
-		
+
 		if (feature.properties.Book_Part === 2) {
 				switch (feature.properties.Character) {
 					case 'Princesse de Clèves': return {color: "#e931be", dashArray: '25,20'};
@@ -681,7 +681,7 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 					case 'La Cour': return {color: "#A04000", dashArray: '15, 10, 5'};
 				}
 			}
-			
+
 		if (feature.properties.Book_Part === 4) {
 				switch (feature.properties.Character) {
 					case 'Prince de Clèves': return {color: "#ff0000", dashArray: '5, 10' };
@@ -697,13 +697,13 @@ var leCercamp = L.marker([50.24720490139267, 2.6312255859375004]);
 					case 'Madame de Martigues': return {color: "#FAD7A0", dashArray: '5, 10' };
 				}
 			}
-		}; 
-			
+		};
+
 
 //Setting up the two filtered drop down boxes, one by part and one by character, to show only certain characters/parts at any one time
-//Its based on two attributes which must both be "on" for the line to show	
+//Its based on two attributes which must both be "on" for the line to show
 var partDropdown = L.control({position: 'topright'});
-	
+
 	partDropdown.onAdd = function (map) {
 		var div = L.DomUtil.create('div', 'info legend');
 		div.innerHTML = '<select><option>Parts of the Novel</option><option>Show All Parts</option><option>Part 1</option><option>Part 2</option><option>Part 3</option><option>Part 4</option></select>';
@@ -713,42 +713,42 @@ var partDropdown = L.control({position: 'topright'});
 		partDropdown.addTo(map);
 		$('select').change(function(){
 			var value = $(this).val();
-			
+
 				if (value === 'Parts of the Novel') {
 					movement.refilter(function(feature){
 							feature.properties.turnOn = 0;
-							
+
 						return feature.properties.turnOn == 1 && feature.properties.showOnMap==1;})	}
-						
-			
-				
+
+
+
 				if (value === 'Show All Parts') {
 					movement.refilter(function(feature){
 							feature.properties.turnOn = 1;
-							
+
 						return feature.properties.turnOn == 1 && feature.properties.showOnMap==1;})	}
 
 			if (value == 'Part 1') {
 				movement.refilter(function(feature){
 					if (feature.properties.Book_Part==1) {
 						feature.properties.turnOn = 1; }
-					else 
+					else
 						feature.properties.turnOn=0;
-			 return feature.properties.turnOn == 1 && feature.properties.showOnMap==1;})	} 
-			
+			 return feature.properties.turnOn == 1 && feature.properties.showOnMap==1;})	}
+
 			if (value == 'Part 2') {
 				movement.refilter(function(feature){
 				if (feature.properties.Book_Part==2) {
 					feature.properties.turnOn = 1; }
-				else 
+				else
 						feature.properties.turnOn=0;
 			 return feature.properties.turnOn == 1 && feature.properties.showOnMap==1;})	}
-			
+
 			if (value == 'Part 3') {
 				movement.refilter(function(feature){
 				if (feature.properties.Book_Part==3) {
 					feature.properties.turnOn = 1; }
-					else 
+					else
 						feature.properties.turnOn=0;
 			 return feature.properties.turnOn == 1 && feature.properties.showOnMap==1;})	}
 
@@ -756,11 +756,11 @@ var partDropdown = L.control({position: 'topright'});
 				movement.refilter(function(feature){
 				if (feature.properties.Book_Part==4) {
 					feature.properties.turnOn = 1; }
-					else 
+					else
 						feature.properties.turnOn=0;
-			 return feature.properties.turnOn == 1 && feature.properties.showOnMap==1;})	} 
+			 return feature.properties.turnOn == 1 && feature.properties.showOnMap==1;})	}
 
-			 
+
 });
 function filterInfo(){
 	var div2 = L.DomUtil.get("box1");
@@ -773,193 +773,193 @@ var characterDropdown = L.control({position: 'topright'});
 	characterDropdown.onAdd = function (map) {
 		var div = L.DomUtil.create('div', 'info');
 		div.innerHTML = "<select><option>Character Movements in the Novel</option><option>Show All Characters</option><option>Princesse de Clèves</option><option>Prince de Clèves</option><option>Duc de Nemours</option><option>La Cour</option><option>Henri II</option><option>Élisabeth de France</option><option>Vidame de Chartres</option><option>Connétable de Montmorency</option><option>Maréchal de Saint-André</option><option>Cardinal de Lorraine</option><option>Prince de Condé</option><option>Roi de Navarre</option><option>Duc de Savoie</option><option>Duc d'Albe</option><option>Madame de Martigues</option><option>Comte de Radan</option><option>Lignerolles</option><option>Connétable de Bourbon</option><option>Médecin du roi d'Espagne</option><option>Gentilhomme</option></select>";
-		
+
 		div.firstChild.onmousedown = div.firstChild.ondblclick = L.DomEvent.stopPropagation;
 		return div;
 		};
 		characterDropdown.addTo(map);
-		
+
 		$('select').change(function(){
 			var value = $(this).val();
 			movement.addTo(map);
 			if (value === 'Character Movements in the Novel') {
 					movement.refilter(function(feature){
 							feature.properties.showOnMap = 0;
-							
+
 						return feature.properties.turnOn == 1 && feature.properties.showOnMap==1;})	}
-						
+
 			if (value == 'Show All Characters') {
 				movement.refilter(function(feature){
 					feature.properties.showOnMap = 1;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
+
 			if (value == 'Prince de Clèves') {
 				movement.refilter(function(feature){
 					if (feature.properties.Character=='Prince de Clèves') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
-					
+
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
+
 			if (value == 'Duc de Nemours') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Duc de Nemours') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
+
 			if (value == 'Cardinal de Lorraine') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Cardinal de Lorraine') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
+
 			if (value == 'Connétable de Montmorency') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Connétable de Montmorency') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
+
 			if (value == 'Maréchal de Saint-André') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Maréchal de Saint-André') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
+
 			if (value == 'Henri II') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Henri II') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
+
 			if (value == 'Duc de Savoie') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Duc de Savoie') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
+
 			if (value == 'Comte de Radan') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Comte de Radan') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
+
 			if (value == 'Connétable de Bourbon') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Connétable de Bourbon') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
+
 			if (value == 'Lignerolles') {
 				movement.refilter(function(feature){
 			if (feature.properties.Character=='Lignerolles') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
-		
-			
+
+
+
 			if (value == 'Princesse de Clèves') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Princesse de Clèves') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
-			
+
+
 			if (value == 'Vidame de Chartres') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Vidame de Chartres') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
+
 			if (value == "Duc d'Albe") {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=="Duc d'Albe") {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
+
 			if (value == "Médecin du roi d'Espagne") {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=="Médecin du roi d'Espagne") {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-		
+
 			if (value == 'La Cour') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='La Cour') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-	
+
 			if (value == 'Roi de Navarre') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Roi de Navarre') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-	
+
 			if (value == 'Prince de Condé') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Prince de Condé') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-	
+
 	if (value == 'Élisabeth de France') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Élisabeth de France') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
-			
+
+
 			if (value == 'Gentilhomme') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Gentilhomme') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-			
-			
-			
+
+
+
 			if (value == 'Madame de Martigues') {
 				movement.refilter(function(feature){
 				if (feature.properties.Character=='Madame de Martigues') {
 					feature.properties.showOnMap = 1; }
-					else 
+					else
 						feature.properties.showOnMap=0;
 			return feature.properties.showOnMap===1 && feature.properties.turnOn===1;})	}
-	}); 
+	});
 
 //Now we do the same thing for the opacity control box
 //Here is our list of Layers to be controlled by the Opacity Control Box, again in the proper order
@@ -988,10 +988,10 @@ var characterDropdown = L.control({position: 'topright'});
 		L.control.scale().addTo(map);
 		map.addControl(new L.Control.Fullscreen());
 
-	
+
 	/*Removed timeline to use dropdown box instead
 //The following portion of the code is all about the timeline
-//This portion of the code sets up the style of the timeline. 
+//This portion of the code sets up the style of the timeline.
 //Here you can pick the max/min of the slider, the number of ticks, the width between ticks, etc
  var slider = d3
     .sliderHorizontal()
@@ -1006,14 +1006,14 @@ var characterDropdown = L.control({position: 'topright'});
 	    onSlider(val);
     });
 //This portion of the code sets up the size attributes of the of the timeline
-  d3.select('#slider') 
+  d3.select('#slider')
     .append('svg')
     .attr('width', 200)
     .attr('height', 50)
     .append('g')
     .attr('transform', 'translate(20,10)')
-    .call(slider); 
-	
+    .call(slider);
+
 //This portion of the code says what happens when different values (1, 2, 3, 4) of the timeline are chosen
 //Right now, since there is only one part of the book with data, it turns on part 1 when part 1 is chosen, and turns if off when any other part is chosen
 //It will need to be updated when more parts are available
@@ -1024,7 +1024,7 @@ var characterDropdown = L.control({position: 'topright'});
 		movement.remove();}
 	}
 //This is the initial filter to open the map with
-	onSlider(1); 					
+	onSlider(1);
 */
 
 
@@ -1037,10 +1037,10 @@ var characterDropdown = L.control({position: 'topright'});
 		});
     movement.on('mouseout', function () {
         this.setText(null);
-    }); 
+    });
 */
 
-/* Added to inside of onEachFeature function 
+/* Added to inside of onEachFeature function
 //Function to allow for popup box containing attributes of .geoJSON files
 //This can be customized further when the final characteristics fo the .geoJSON are set up
 	function popUp(f,l){
@@ -1054,18 +1054,18 @@ var characterDropdown = L.control({position: 'topright'});
 						out.push(key+": "+f.properties[key]); //pushes out .geoJSON attributes exported from ArcGIS
 					}
 				}
-		l.bindPopup(out.join("<br />"))		
-	}*/	
-	
-/*This section of the code created the original legend. It has been moved into a side panel 
+		l.bindPopup(out.join("<br />"))
+	}*/
+
+/*This section of the code created the original legend. It has been moved into a side panel
 //the .css info for the legend can be found in the .css file
 //getColor will need to be updated with future character colors, along with the categories array for character names
 	function getColor(d) {
 		return 	d === 'Prince de Clèves' ? '#ff0000' :
-				d === 'Duc de Nemours'? '#0000ff' :			
+				d === 'Duc de Nemours'? '#0000ff' :
 				d === 'Cardinal de Lorraine'? "#d9ff15":
 				d === 'Connétable de Montmorency'?  "#5e8d46":
-				d === 'Maréchal de Saint-André' ? "#c59be9":				
+				d === 'Maréchal de Saint-André' ? "#c59be9":
 				d === 'Henri II'?  "#000000":
 				d === 'Duc de Savoie'?  "#a66c32":
 				d === 'Comte de Radan'?  "#c400ff":
@@ -1102,7 +1102,7 @@ var characterDropdown = L.control({position: 'topright'});
 
 		// loop through our characters and generate a label with a colored square for each character
 		for (var i = 0; i < categories.length; i++) {
-            div.innerHTML += 
+            div.innerHTML +=
             labels.push(
                 '<i class="circle" style="background:' + getColor(categories[i]) + '"></i> ' +
             (categories[i] ? categories[i] : '+'));
@@ -1116,7 +1116,4 @@ var characterDropdown = L.control({position: 'topright'});
 	};
 	legend.addTo(map);
 	hideLegend();
-*/	
-	
-	
-	
+*/
