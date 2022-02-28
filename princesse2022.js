@@ -323,8 +323,9 @@ map.addControl( searchControlPeople );
     movementGroup.addLayer(characterMovement).addTo(map); //add layer back to group
 });
 
-
+//////////////////////////////////////////////////////
 /////////////////SIDEBAR//////////////////////////////
+//////////////////////////////////////////////////////
 	var sidebarLeft = L.control.sidebar({position:"left"}).addTo(map);
 
 
@@ -428,7 +429,17 @@ map.addControl( searchControlPeople );
 
 
 	//creation of map information panel
-		var mapInformation = "Information about the map";
+		var mapInformation = "<center><h1>About the Interactive Map</h1></center><br>" +
+		"Text Matt will write about the building of the interactive map<br><br><br>" +
+		"<center><h1>Historical Maps</h1></center><br>" +
+		"Several historical maps are used as underlays within the interactive character map.<br><br>"+
+		"<b>Europe 1644</b>: Blaeu, Willem, Europa Recens Descripta, Amsterdam, 1644, 41 cm x 55 cm. <a href='https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~285941~90058459:Europa-recens-descripta-?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:Europa%20Recens%20Descripta;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=1&trs=2'>Link</a><br><br>"+
+		"<b>France 1570</b>: Ortelius, Abraham, Galliae Regni Potentiss: Nova Descriptio. Ioanne Ioliveto Auctore, [atlas map], Antwerp, Gielis Coppens van Diest, 1570, 34 cm x 50 cm.<br><br>"+
+		"<b>Île de France 1598</b>: Ortelius, Abraham and Vrients, Jan Baptista, L’Isle de France. Parisiensis Agri Descrip., [atlas map], Antwerp, Jan Baptista Vrients, 1598, 34 cm x 46 cm. <a href='https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~275581~90048943:-29--L-Isle-de-France-?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:L%E2%80%99Isle%20de%20France.%20Parisiensis%20Agri%20Descrip.;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=0&trs=2'>Link</a><br><br>" +
+		"<b>Paris 1575</b>: Braun, Georg and Hogenberg, Franz, Lutetia, vulgari nomine Paris, [atlas map], Cologne, Peter von Brachel, 1575, 35 cm x 48 cm. <a href='https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~286750~90059245:Vol-I--7--Lutetia,-vulgari-nomine-P'>Link</a><br><br>"+
+		"<b>Paris 1615</b>: Merian, Mathieu, Le Plan de la Ville, Cité, Université et Fauxbourgs de Paris, Paris, Nicolas de Mathonier, 1615, six plates of 90 cm x 102 cm. Facsimile: Paris, A. Taride, 1908. <a href='https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~301368~90072328:Pl--XV--Paris-en-1615-?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:merian;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=10&trs=348'>Link</a><br><br>"+
+		"<b>Paris 1652</b>: Gomboust, Jacques, Lutetia, Paris, Paris, Impr. Ch. Chardon, 1652, nine plates of 33 cm x 50 cm. Facsimile: Paris, Taride, 1900. <a href='https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~301378~90072338:Composite-Map--Pl--XVIII--Paris-en-?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:Gomboust%20Paris;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=4&trs=5'>Link</a><br><br>" +
+		"<b>Paris 1675</b>: Rochefort Map of Paris";
 		var mapInfoContent = {
 			id: 'aboutMapTab',                     // UID, used to access the panel
 			tab: '<i class="fa fa-question-circle"></i>',  // content can be passed as HTML string,
@@ -905,13 +916,13 @@ map.addControl( searchControlPeople );
 //Right now it includes all the other maps we have imported, as well as our Points of Focus icon group
 //Note the order the maps are listed here is the order they will appear in the checkbox. The first part of each row is the label to accompany it
 	var overlayMaps = {
-			"<a target='_blank' href=''>1578 Paris</a>": paris1578,
-			"<a target='_blank' href=''>1615 Paris</a>" : paris1615,
-			"<a target='_blank' href=''>1652 Paris</a>" : paris1652,
-			"<a target='_blank' href=''>1675 Paris</a>" : paris1675,
-			"<a target='_blank' href=''>1598 Ile de France</a>" : ileDeFrance1598,
-			"<a target='_blank' href=''>1570 France</a>" : france1570,
-			"<a target='_blank' href=''>1644 Europe</a>" : europe1644,
+			"1575 Paris": paris1578,
+			"1615 Paris" : paris1615,
+			"1652 Paris" : paris1652,
+			"1675 Paris" : paris1675,
+			"1598 Ile de France" : ileDeFrance1598,
+			"1570 France" : france1570,
+			"1644 Europe" : europe1644,
 			//"Points of Focus" : pointsOfFocus,
 			"Character Movements" : characterMovement
 			};
@@ -922,7 +933,7 @@ map.addControl( searchControlPeople );
 	//Now we do the same thing for the opacity control box
 	//Here is our list of Layers to be controlled by the Opacity Control Box, again in the proper order
 			var opacityLayers = {
-				"1578 Paris" : paris1578,
+				"1575 Paris" : paris1578,
 				"1615 Paris" : paris1615,
 				"1652 Paris" : paris1652,
 				"1675 Paris" : paris1675,
