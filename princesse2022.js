@@ -924,7 +924,7 @@ map.addControl( searchControlPeople );
 			"1570 France" : france1570,
 			"1644 Europe" : europe1644,
 			//"Points of Focus" : pointsOfFocus,
-			"Character Movements" : characterMovement
+			//"Character Movements" : characterMovement
 			};
 
 //Then this created the actual control box
