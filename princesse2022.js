@@ -553,6 +553,37 @@ map.addControl( searchControlPeople );
 						reims.setIcon(blueIcon);
 					});
 
+function louvreSlideShow() {
+	var images = ['Louvre1.jpeg', 'http://fwwcpdigitalcollection.org/files/sourcedocs/bookcovers2.jpeg'];
+	var slideshowContent = '';
+	    for(var i = 0; i < images.length; i++) {
+	        var img = images[i];
+
+	        slideshowContent += '<div class="image' + (i === 0 ? ' active' : '') + '">' +
+	                              '<img src="' + img[0] + '" />' +
+	                             // '<div class="caption">' + img[1] + '</div>' +
+	                            '</div>';
+	         }
+					 var popupContent =  '<div id="louvre" class="popup">' + /*
+"<h1><font color='red'>"+feature.properties.Title+
+"</font></h1><h2>Address: " +feature.properties.Head+
+"</h2><p>"+feature.properties.Description+"</p><p> Website:"
++feature.properties.URL+*/
+
+												'<div class="slideshow">' +
+														slideshowContent +
+												'</div>' +
+												'<div class="cycle">' +
+														'<a href="#" class="prev">&laquo; Previous</a>' +
+														'<a href="#" class="next">Next &raquo;</a>' +
+												'</div>'
+										'</div>';
+
+louvre.bindPopup(popupContent);
+};
+louvreSlideShow();
+
+
 			function louvrecontent() {
 					popupContent = "<center><h1>Le palais du Louvre</h1></center><br>" +
 					"Les fondations du palais du Louvre ont été construites vers 1200, sous le règne du roi Philippe-Auguste (1190-1223). Initialement, le palais se trouvait entre la Seine et le mur entourant Paris et servait de forteresse protégeant la ville de Paris des invasions anglaises. Le bâtiment rectangulaire possède alors des tours aux quatre coins et un donjon au centre de la structure. Le Louvre n’est pas une résidence royale mais plutôt un lieu où sont convoquées des assemblées et où sont enfermés des prisonniers. Le roi Charles V (1364-1380) inclut le Louvre dans ses résidences et ordonne à l’architecte Raymond du Temple d’y construire de nouveaux appartements.<br><br>" +
