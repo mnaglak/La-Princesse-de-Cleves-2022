@@ -146,7 +146,7 @@ movementGroup.addTo(map);
 var searchControlPart = new L.Control.Search({
   layer: L.featureGroup([movementGroup]),
   propertyName: 'Book_Part',
-  textPlaceholder: 'Filter by Part',
+  textPlaceholder: 'Filter by Part of Book',
   marker: false,
   collapsed: false,
   zoom: 8
@@ -156,7 +156,7 @@ map.addControl( searchControlPart);
 	searchControlPart.on('search:locationfound', function(e) {
     movementGroup.clearLayers();
 
-    var choicePart = document.getElementById("searchtext14").value;
+    var choicePart = document.getElementById("searchtext22").value;
     var choiceCharacter = document.getElementById("searchtext19").value;
 
     var characterMovement = L.geoJson(movement, { //filter geojson based on user input and record start and stop data and province data
@@ -246,7 +246,7 @@ map.addControl( searchControlPeople );
     movementGroup.clearLayers();
     //check search boxes for content
     var choiceCharacter = document.getElementById("searchtext19").value;
-    var choicePart = document.getElementById("searchtext14").value;
+    var choicePart = document.getElementById("searchtext22").value;
 
     //filter movement based on search box contents, checking both boxes
     var characterMovement = L.geoJson(movement, { //filter geojson based on user input and record start and stop data and province data
@@ -279,7 +279,7 @@ map.addControl( searchControlPeople );
     //Clear Search, checking if the other search box has content
   }).on('search:cancel', function(e) {
     movementGroup.clearLayers();
-    var choicePart = document.getElementById("searchtext14").value;
+    var choicePart = document.getElementById("searchtext22").value;
     if (choicePart=='') {
     var characterMovement = L.geoJson(movement, { //filter geojson based on user input and record start and stop data and province data
 			style: swapStyle,
@@ -554,7 +554,7 @@ map.addControl( searchControlPeople );
 					});
 
 function louvreSlideShow() {
-	var images = ['Louvre1.jpeg', 'http://fwwcpdigitalcollection.org/files/sourcedocs/bookcovers2.jpeg'];
+	var images = ['https://Louvre1.jpeg', 'http://fwwcpdigitalcollection.org/files/sourcedocs/bookcovers2.jpeg'];
 	var slideshowContent = '';
 	    for(var i = 0; i < images.length; i++) {
 	        var img = images[i];
@@ -596,16 +596,16 @@ louvreSlideShow();
 			};
 
 		//for hotels
-				var hotels = L.marker([48.860875144709475, 2.3408818244934086]);
-				hotels.bindTooltip("Hôtels particuliers").openTooltip();
+				var hotels = L.marker([48.86196212502818, 2.3345947265625004]);
+				hotels.bindTooltip("Salon of Rambouillet").openTooltip();
 					hotels.on("click", function (e) {
-						hotelscontent();
+						hotels1content();
 						sidebarLeft.removePanel('popupCont');
 						sidebarLeft.addPanel({
 							id: 'popupCont',                     // UID, used to access the panel
 							tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 							pane: popupContent,        // DOM elements can be passed, too
-							title: 'Hôtels particuliers',              // an optional pane header
+							title: 'Salon of Rambouillet',              // an optional pane header
 							position: 'top'
 						});
 						sidebarLeft.open('popupCont');
@@ -618,20 +618,27 @@ louvreSlideShow();
 						chambord.setIcon(blueIcon);
 						palaisDesTournelles.setIcon(blueIcon);
 						hotels.setIcon(greenIcon);
-						hotels2.setIcon(greenIcon);
+						hotels2.setIcon(blueIcon);
 						reims.setIcon(blueIcon);
 					});
-
+					function hotels1content()
+					{
+						popupContent = "<center><h1>Salon of Rambouillet</h1></center><br>" +
+						"L’hôtel de Rambouillet se situe à Paris, dans l’ancien quartier du « Carrousel », dans la rue Saint-Thomas du Louvre. Le salon de Rambouillet, dont les activités commencent vers 1610 et se terminent vers 1665, inaugure la tradition des salons littéraires à Paris pendant l’ancien régime. Bien que cet hôtel particulier jouxte le palais du Louvre, Catherine de Vivonne de Savelli, marquise de Rambouillet (1588-1665), le conçoit comme un lieu qui s’oppose à la cour royale. La marquise de Rambouillet, dit Arthénice, anime le salon dans sa fameuse « chambre bleue » où sont invités des membres de la noblesse d’épée et de la noblesse de robe, ainsi que des gens de lettres. Madame de Lafayette, Madame de Sévigné, Pierre Corneille, Madeleine de Scudéry et Valentin Conrart, l’un des fondateurs de l’Académie française fréquentent ce salon. Très vite, le salon de Rambouillet devient un modèle idéal de la société de cour, défini par la galanterie et la politesse." +
+						"<center><h1>Salon of Rambouillet</h1></center><br>" +
+						"The Hôtel de Rambouillet was located in Paris, in the former neighborhood of the “Carrousel,” on the rue Saint-Thomas du Louvre. The Rambouillet salon, which began around 1610 and ended around 1665, inaugurated the tradition of literary salons in Paris during the Ancien Régime. Even though this private residence was next to the Louvre, Catherine de Vivonne de Savelli, Marquise de Rambouillet, (1588-1665) envisioned it as the opposite of the royal court. The Marquise de Rambouillet, also known as Arthénice, hosted the salons in her famous blue room (la chambre bleue), to which members of the old nobility (la noblesse d’épée) and the new nobility (la noblesse de robe), as well as men and women of letters, were invited. Some of the guests who frequented the salon were Madame de Lafayette, Madame de Sévigné, Pierre Corneille, Madeleine de Scudéry and Valentin Conrart, one of the founders of the Académie française. The Rambouillet salon soon became an ideal model of courtly behavior, defined by courtesy and politeness.";
+						return popupContent;
+					};
 				var hotels2 = L.marker([48.85678111084862, 2.3626613616943364]);
-				hotels2.bindTooltip("Hôtels particuliers").openTooltip();
+				hotels2.bindTooltip("Salon of Madeleine de Scudéry").openTooltip();
 					hotels2.on("click", function (e) {
-						hotelscontent();
+						hotels2content();
 						sidebarLeft.removePanel('popupCont');
 						sidebarLeft.addPanel({
 							id: 'popupCont',                     // UID, used to access the panel
 							tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 							pane: popupContent,        // DOM elements can be passed, too
-							title: 'Hôtels particuliers',              // an optional pane header
+							title: 'Salon of Madeleine de Scudéry',              // an optional pane header
 							position: 'top'
 						});
 						sidebarLeft.open('popupCont');
@@ -643,17 +650,18 @@ louvreSlideShow();
 						blois.setIcon(blueIcon);
 						chambord.setIcon(blueIcon);
 						palaisDesTournelles.setIcon(blueIcon);
-						hotels.setIcon(greenIcon);
+						hotels.setIcon(blueIcon);
 						hotels2.setIcon(greenIcon);
 						reims.setIcon(blueIcon);
 					});
 
 
-				function hotelscontent()
+				function hotels2content()
 				{
-					popupContent = "<b> I am Hôtels particuliers</b><br>";
-
-
+					popupContent = "<center><h1>Salon of Madeleine de Scudéry</h1></center><br>" +
+					"Le salon de Madeleine de Scudéry se trouve à Paris, dans le quartier du Marais. Madeleine de Scudéry (1607-1701) est née au Havre et déménage à Paris vers 1637, suivant son frère, le dramaturge et académicien Georges de Scudéry. Elle fréquente le salon de Rambouillet à partir de 1639 et, vers 1653, elle commence à animer son propre salon, dit « les Samedis » ou « la Société du samedi ». Plusieurs écrivains qui fréquentent l’hôtel de Rambouillet se retrouvent au salon de Mademoiselle de Scudéry, dont Valentin Conrart, Gilles Ménage, Madame de Sévigné et Madame de Lafayette. Ils discutent, entre autres choses, la nature de l’amour et de l’amitié, les œuvres littéraires et de philosophie. Madeleine de Scudéry a écrit quelques romans héroïques, dont Clélie, histoire romaine (1654-1660), des œuvres philosophiques et des dialogues qui reflètent des débats courants dans les salons." +
+					"<center><h1>Salon of Madeleine de Scudéry</h1></center><br>" +
+					"Madeleine de Scudéry’s salon was located in Paris, in the neighborhood of the Marais. Madeleine de Scudéry (1607-1701) was born in Le Havre and moved to Paris around 1637, following her brother, the playwright Georges de Scudéry. She frequented the Rambouillet salon starting in 1639, and around 1653, she began to host her own salon, known as the Saturday meetings (les Samedis) or the Saturday Group (la Société du Samedi). Several writers who visited the Hôtel de Rambouillet also met at Mademoiselle de Scudéry’s salon, including Valentin Conrart, Gilles Ménage, Madame de Sévigné, and Madame de Lafayette. They discussed, among other worldly topics, the nature of love and friendship, literary works, and philosophy. Madeleine de Scudéry wrote heroic novels, including Clélie, histoire romaine (1654-60), philosophical works, and dialogues that reflected common debates in the salons.";
 					return popupContent;
 				};
 
