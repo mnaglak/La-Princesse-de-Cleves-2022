@@ -449,7 +449,7 @@ map.addControl( searchControlPeople );
 		};
 		sidebarLeft.addPanel(mapInfoContent);
 
-	//creation of contact panel
+/*	//creation of contact panel
 		var contactContent = "Contact us!";
 		var panelContent2 = {
 			id: 'contactUs',                     // UID, used to access the panel
@@ -458,7 +458,7 @@ map.addControl( searchControlPeople );
 			title: 'Contact Information',              // an optional pane header
 			position: 'bottom'                  // optional vertical alignment, defaults to 'top'
 		};
-		sidebarLeft.addPanel(panelContent2);
+		sidebarLeft.addPanel(panelContent2); */
 
 		//when closing sidbar, resets icon color changes for each site
 			map.on('click', function() {
@@ -554,7 +554,7 @@ map.addControl( searchControlPeople );
 					});
 
 function louvreSlideShow() {
-	var images = ['https://Louvre1.jpeg', 'http://fwwcpdigitalcollection.org/files/sourcedocs/bookcovers2.jpeg'];
+	var images = ['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/Louvre1.jpeg', 'http://fwwcpdigitalcollection.org/files/sourcedocs/bookcovers2.jpeg'];
 	var slideshowContent = '';
 	    for(var i = 0; i < images.length; i++) {
 	        var img = images[i];
