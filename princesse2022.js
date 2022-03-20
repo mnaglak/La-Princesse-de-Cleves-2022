@@ -554,34 +554,63 @@ map.addControl( searchControlPeople );
 					});
 
 function louvreSlideShow() {
-	var images = ['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/Louvre1.jpeg', 'http://fwwcpdigitalcollection.org/files/sourcedocs/bookcovers2.jpeg'];
-	var slideshowContent = '';
+	var images= [['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-01.jpeg','Caption 1'],
+	            ['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-02.jpeg','Caption 2'],
+	            ['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-03.jpeg','Caption 3'],
+							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-04.jpeg','Caption 4'],
+							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-05.jpeg','Caption 5'],
+							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-06.jpeg','Caption 6'],
+							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-07.jpeg','Caption 7'],
+							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-08.jpeg','Caption 8'],
+							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-09.jpeg','Caption 9'],
+							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-10.jpeg','Caption 10'],
+							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-11.jpeg','Caption 11'],
+							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-12.jpeg','Caption 12']
+						];
+			var slideshowContent = '';
 	    for(var i = 0; i < images.length; i++) {
 	        var img = images[i];
 
-	        slideshowContent += '<div class="image' + (i === 0 ? ' active' : '') + '">' +
+	        slideshowContent += '<div class="image' + (i == 0 ? ' active' : '') + '">' +
 	                              '<img src="' + img[0] + '" />' +
-	                             // '<div class="caption">' + img[1] + '</div>' +
+	                              '<div class="caption">' + img[1] + '</div>' +
 	                            '</div>';
 	         }
-					 var popupContent =  '<div id="louvre" class="popup">' + /*
-"<h1><font color='red'>"+feature.properties.Title+
-"</font></h1><h2>Address: " +feature.properties.Head+
-"</h2><p>"+feature.properties.Description+"</p><p> Website:"
-+feature.properties.URL+*/
+					 var popupContent =  '<div id="' + "Louvre" + '" class="popup">' +
+													 '<div class="slideshow">' +
+															 slideshowContent +
+													 '</div>' +
+													 '<div class="cycle">' +
+															 '<a href="#" class="prev">&laquo; Previous</a>' +
+															 '<a href="#" class="next">Next &raquo;</a>' +
+													 '</div>'
+											 '</div>';
 
-												'<div class="slideshow">' +
-														slideshowContent +
-												'</div>' +
-												'<div class="cycle">' +
-														'<a href="#" class="prev">&laquo; Previous</a>' +
-														'<a href="#" class="next">Next &raquo;</a>' +
-												'</div>'
-										'</div>';
-
-louvre.bindPopup(popupContent);
+	 louvre.bindPopup(popupContent);
 };
 louvreSlideShow();
+
+
+$('#map').on('click', '.popup .cycle a', function() {
+    var $slideshow = $('.slideshow'),
+        $newSlide;
+
+    if ($(this).hasClass('prev')) {
+        $newSlide = $slideshow.find('.active').prev();
+        if ($newSlide.index() < 0) {
+            $newSlide = $('.image').last();
+        }
+    } else {
+        $newSlide = $slideshow.find('.active').next();
+        if ($newSlide.index() < 0) {
+            $newSlide = $('.image').first();
+        }
+    }
+
+    $slideshow.find('.active').removeClass('active').hide();
+    $newSlide.addClass('active').show();
+    return false;
+});
 
 
 			function louvrecontent() {

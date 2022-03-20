@@ -1,9 +1,9 @@
  html { height: 100% }
     body { height: 100%; margin: 0; padding: 0 }
     #map { height: 100% }
-    
+
 	/* Edited out when we decided to use the drop down box instead of the timeline
-	this edits the style of your timeline 
+	this edits the style of your timeline
 	.box {
         border: 1px solid #EEE;
         margin: 2px;
@@ -13,7 +13,7 @@
         font-size: 12px;
         z-index: 1000;
     }
-	 this edits the font of your title 
+	 this edits the font of your title
     .title {
         font-weight: 600;
     }
@@ -53,9 +53,26 @@ border-radius: 5px;
   z-index:1000;
   opacity: 85%;
   padding-left: 5px;
-  
+
 }
 
+.popup {
+ text-align:center;
+ }
+  .popup .slideshow .image        { display:none; }
+  .popup .slideshow .image.active { display:block; }
+  .popup .slideshow img {
+ width:100%;
+ }
+  .popup .slideshow .caption {
+background:#eee;
+ padding:10px;
+ }
+  .popup .cycle {
+ padding:10px 0 20px;
+ }
+ .popup .cycle a.prev { float:left; }
+ .popup .cycle a.next { float:right; }
 /*
 .legend {
 background-color: “black”;
