@@ -554,7 +554,7 @@ map.addControl( searchControlPeople );
 					});
 
 function louvreSlideShow() {
-	var images= [['./Images/louvre/Figure-LOC-01.jpeg','Caption 1'],
+	var images= [['./Images/louvre/Figure-LOC-01.jpeg','Here is an example image of the Louvre with a caption.'],
 	            ['./Images/louvre/Figure-LOC-02.png','Caption 2'],
 	            ['./Images/louvre/Figure-LOC-03.jpg','Caption 3'],
 							['./Images/louvre/Figure-LOC-04.jpg','Caption 4'],
