@@ -146,7 +146,7 @@ movementGroup.addTo(map);
 var searchControlPart = new L.Control.Search({
   layer: L.featureGroup([movementGroup]),
   propertyName: 'Book_Part',
-  textPlaceholder: 'Filter by Part of Book',
+  textPlaceholder: 'Filter by Part of Book (1-4)',
   marker: false,
   collapsed: false,
   zoom: 8
