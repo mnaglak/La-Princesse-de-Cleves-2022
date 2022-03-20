@@ -554,18 +554,18 @@ map.addControl( searchControlPeople );
 					});
 
 function louvreSlideShow() {
-	var images= [['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-01.jpeg','Caption 1'],
-	            ['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-02.jpeg','Caption 2'],
-	            ['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-03.jpeg','Caption 3'],
-							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-04.jpeg','Caption 4'],
-							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-05.jpeg','Caption 5'],
-							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-06.jpeg','Caption 6'],
-							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-07.jpeg','Caption 7'],
-							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-08.jpeg','Caption 8'],
-							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-09.jpeg','Caption 9'],
-							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-10.jpeg','Caption 10'],
-							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-11.jpeg','Caption 11'],
-							['https://mnaglak.github.io/La-Princesse-de-Cleves-2022/Images/louvre/Figure-LOC-12.jpeg','Caption 12']
+	var images= [['./Images/louvre/Figure-LOC-01.jpeg','Caption 1'],
+	            ['./Images/louvre/Figure-LOC-02.png','Caption 2'],
+	            ['./Images/louvre/Figure-LOC-03.jpg','Caption 3'],
+							['./Images/louvre/Figure-LOC-04.jpg','Caption 4'],
+							['./Images/louvre/Figure-LOC-05.jpg','Caption 5'],
+							['./Images/louvre/Figure-LOC-06.png','Caption 6'],
+							['./Images/louvre/Figure-LOC-07.jpeg','Caption 7'],
+							['./Images/louvre/Figure-LOC-08.jpeg','Caption 8'],
+							['./Images/louvre/Figure-LOC-09.jpeg','Caption 9'],
+							['./Images/louvre/Figure-LOC-10.jpeg','Caption 10'],
+							['./Images/louvre/Figure-LOC-11.jpg','Caption 11'],
+							['./Images/louvre/Figure-LOC-12.jpeg','Caption 12']
 						];
 			var slideshowContent = '';
 	    for(var i = 0; i < images.length; i++) {
