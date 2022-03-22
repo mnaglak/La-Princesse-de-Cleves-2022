@@ -33,10 +33,13 @@
 .leaflet-popup-content {
 width:auto !important;
 } */
-
+.leaflet-container {
+	font: 15px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
+  
 .info {
 padding: 6px 8px;
-font: 14px/16px Arial, Helvetica, sans-serif;
+font: 18px/20px Arial, Helvetica, sans-serif;
 background: blue;
 background: rgba(255,255,255,0.8);
 box-shadow: 0 0 15px rgba(0,0,0,0.2);
