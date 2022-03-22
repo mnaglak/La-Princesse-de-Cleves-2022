@@ -573,7 +573,7 @@ function louvreSlideShow() {
 
 	        slideshowContent += '<div class="image' + (i == 0 ? ' active' : '') + '">' +
 	                              '<img src="' + img[0] + '" />' +
-	                              '<div class="caption">' + img[1] + '</div>' +
+	                              '<div class="caption">' + img[1] +'</div>' +
 	                            '</div>';
 	         }
 					 var popupContent =  '<div id="' + "Louvre" + '" class="popup">' +

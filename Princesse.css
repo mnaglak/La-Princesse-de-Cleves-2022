@@ -55,14 +55,17 @@ border-radius: 5px;
   padding-left: 5px;
 
 }
-
+.leaflet-popup {
+  width:500px;
+}
 .popup {
  text-align:center;
+ width:450px;
  }
-  .popup .slideshow .image        { display:none; }
-  .popup .slideshow .image.active { display:block; }
+  .popup .slideshow .image        { display:none;}
+  .popup .slideshow .image.active { display:block;}
   .popup .slideshow img {
- width:100%;
+    width:100%;
  }
   .popup .slideshow .caption {
 background:#eee;
