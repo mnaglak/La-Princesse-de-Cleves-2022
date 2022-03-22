@@ -156,7 +156,7 @@ map.addControl( searchControlPart);
 	searchControlPart.on('search:locationfound', function(e) {
     movementGroup.clearLayers();
 
-    var choicePart = document.getElementById("searchtext22").value;
+    var choicePart = document.getElementById("searchtext28").value;
     var choiceCharacter = document.getElementById("searchtext19").value;
 
     var characterMovement = L.geoJson(movement, { //filter geojson based on user input and record start and stop data and province data
@@ -246,7 +246,7 @@ map.addControl( searchControlPeople );
     movementGroup.clearLayers();
     //check search boxes for content
     var choiceCharacter = document.getElementById("searchtext19").value;
-    var choicePart = document.getElementById("searchtext22").value;
+    var choicePart = document.getElementById("searchtext28").value;
 
     //filter movement based on search box contents, checking both boxes
     var characterMovement = L.geoJson(movement, { //filter geojson based on user input and record start and stop data and province data
@@ -279,7 +279,7 @@ map.addControl( searchControlPeople );
     //Clear Search, checking if the other search box has content
   }).on('search:cancel', function(e) {
     movementGroup.clearLayers();
-    var choicePart = document.getElementById("searchtext22").value;
+    var choicePart = document.getElementById("searchtext28").value;
     if (choicePart=='') {
     var characterMovement = L.geoJson(movement, { //filter geojson based on user input and record start and stop data and province data
 			style: swapStyle,
