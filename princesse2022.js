@@ -149,7 +149,8 @@ var searchControlPart = new L.Control.Search({
   textPlaceholder: 'Filter by Part of Book (1-4)',
   marker: false,
   collapsed: false,
-  zoom: 8
+  zoom: 8,
+	textErr: "Only Book Parts 1-4"
   });
 map.addControl( searchControlPart);
 
@@ -236,7 +237,8 @@ var searchControlPeople = new L.Control.Search({
   textPlaceholder: 'Filter by Character',
   marker: false,
   collapsed: false,
-  zoom: 8
+  zoom: 8,
+	textErr: "Character not found; see Character List"
 
   });
 map.addControl( searchControlPeople );
