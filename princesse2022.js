@@ -1299,8 +1299,14 @@ $('#map').on('click', '.popup .cycle a', function() {
 
 
 		//	merging of these sites for turning on/off
-				var pointsOfFocus = L.layerGroup([reims,louvre, coulommiers, chantilly, cateauCambrésis, leCercamp, blois, chambord, palaisDesTournelles, hotels, hotels2, lafayette]).addTo(map);
-
+				var pointsOfFocus = L.featureGroup([reims,louvre, coulommiers, chantilly, cateauCambrésis, leCercamp, blois, chambord, palaisDesTournelles, hotels, hotels2, lafayette]).addTo(map);
+				pointsOfFocus.on("click", function (event) {
+				    var clickedMarker = event.layer;
+				    clickedMarker.closePopup();
+						console.log("popup closed");
+						clickedMarker.openPopup();
+						console.log("popup opened");
+				});
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //LAYER CONTROLS////
