@@ -69,6 +69,7 @@ border-radius: 5px;
   .popup .slideshow .image.active { display:block;}
   .popup .slideshow img {
     max-width:450px;
+    max-height:450px;
     /*max-height: 400px;*/
     /*width:100%;*/
  }

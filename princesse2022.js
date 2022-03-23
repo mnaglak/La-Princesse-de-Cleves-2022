@@ -937,7 +937,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 																		 '</div>'
 																 '</div>';
 
-						 cateauCambrésis.bindPopup(popupContent, {maxWidth: "450px"});
+						 cateauCambrésis.bindPopup(popupContent, {maxWidth: "auto"});
 					};
 					cateauCambresisSlideShow();
 
@@ -1036,7 +1036,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 																		 '</div>'
 																 '</div>';
 
-						 chantilly.bindPopup(popupContent, {maxWidth: "450px"});
+						 chantilly.bindPopup(popupContent, {maxWidth: "auto"});
 					};
 					chantillySlideShow();
 
@@ -1100,7 +1100,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 																		 '</div>'
 																 '</div>';
 
-						 blois.bindPopup(popupContent, {maxWidth: "450px"});
+						 blois.bindPopup(popupContent, {maxWidth: "auto"});
 					};
 					bloisSlideShow();
 
@@ -1165,7 +1165,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 																	 '</div>'
 															 '</div>';
 
-					 reims.bindPopup(popupContent, {maxWidth: "450px"});
+					 reims.bindPopup(popupContent, {maxWidth: "auto"});
 				};
 				reimsSlideShow();
 
@@ -1229,7 +1229,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 																		 '</div>'
 																 '</div>';
 
-						 chambord.bindPopup(popupContent, {maxWidth: "450px"});
+						 chambord.bindPopup(popupContent, {maxWidth: "auto"});
 					};
 					chambordSlideShow();
 
