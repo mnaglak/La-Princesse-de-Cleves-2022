@@ -1,3 +1,7 @@
+
+
+
+
 //This is where you define the map start up options, here defined to center on Paris and to have a particular zoom.
 	var mapOptions = {
 		center: [48.86, 2.33],
@@ -582,15 +586,18 @@ function louvreSlideShow() {
 	                              '<div class="caption">' + img[1] +'</div>' +
 	                            '</div>';
 	         }
-					 var popupContent =  '<div id="' + "Louvre" + '" class="popup">' +
+					 var popupContent = L.popup()
+
+					 .setContent('<div id="' + "Louvre" + '" class="popup">' +
 													 '<div class="slideshow">' +
 															 slideshowContent +
 													 '</div>' +
 													 '<div class="cycle">' +
 															 '<a href="#" class="prev">&laquo; Previous</a>' +
 															 '<a href="#" class="next">Next &raquo;</a>' +
-													 '</div>'
-											 '</div>';
+													 '</div>' +
+											 '</div>');
+											 popupContent.update();
 
 	 louvre.bindPopup(popupContent, {maxWidth: "auto"});
 };
@@ -708,15 +715,18 @@ $('#map').on('click', '.popup .cycle a', function() {
 						                              '<div class="caption">' + img[1] +'</div>' +
 						                            '</div>';
 						         }
-										 var popupContent =  '<div id="' + "rambouillet" + '" class="popup">' +
+										 var popupContent = L.popup()
+
+										 .setContent('<div id="' + "Rambouillet" + '" class="popup">' +
 																		 '<div class="slideshow">' +
 																				 slideshowContent +
 																		 '</div>' +
-																	/*	 '<div class="cycle">' +
-																				 '<a href="#" class="prev">&laquo; Previous</a>' +
-																				 '<a href="#" class="next">Next &raquo;</a>' +
-																		 '</div>'*/
-																 '</div>';
+																		 '<div class="cycle">' +
+																				 //'<a href="#" class="prev">&laquo; Previous</a>' +
+																				 //'<a href="#" class="next">Next &raquo;</a>' +
+																		 '</div>' +
+																 '</div>');
+																 popupContent.update();
 
 						 hotels.bindPopup(popupContent, {maxWidth: "auto"});
 					};
@@ -778,17 +788,21 @@ $('#map').on('click', '.popup .cycle a', function() {
 						                              '<div class="caption">' + img[1] +'</div>' +
 						                            '</div>';
 						         }
-										 var popupContent =  '<div id="' + "Scudery" + '" class="popup">' +
+										 var popupContent = L.popup()
+
+										 .setContent('<div id="' + "Scudery" + '" class="popup">' +
 																		 '<div class="slideshow">' +
 																				 slideshowContent +
 																		 '</div>' +
 																		 '<div class="cycle">' +
 																				 '<a href="#" class="prev">&laquo; Previous</a>' +
 																				 '<a href="#" class="next">Next &raquo;</a>' +
-																		 '</div>'
-																 '</div>';
+																		 '</div>' +
+																 '</div>');
+																 popupContent.update();
+						 hotels2.bindPopup(popupContent, {maxWidth: "auto"
+						 });
 
-						 hotels2.bindPopup(popupContent, {maxWidth: "auto"});
 					};
 					scuderySlideShow();
 
@@ -859,9 +873,8 @@ $('#map').on('click', '.popup .cycle a', function() {
 																 '</div>';
 
 						 coulommiers.bindPopup(popupContent, {maxWidth: "auto"});
-					};
+					 };
 				coulommiersSlideShow();
-
 
 
 				function coulommierscontent() {
@@ -924,7 +937,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 																		 '</div>'
 																 '</div>';
 
-						 cateauCambrésis.bindPopup(popupContent, {maxWidth: "auto"});
+						 cateauCambrésis.bindPopup(popupContent, {maxWidth: "450px"});
 					};
 					cateauCambresisSlideShow();
 
@@ -1023,7 +1036,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 																		 '</div>'
 																 '</div>';
 
-						 chantilly.bindPopup(popupContent, {maxWidth: "auto"});
+						 chantilly.bindPopup(popupContent, {maxWidth: "450px"});
 					};
 					chantillySlideShow();
 
@@ -1087,7 +1100,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 																		 '</div>'
 																 '</div>';
 
-						 blois.bindPopup(popupContent, {maxWidth: "auto"});
+						 blois.bindPopup(popupContent, {maxWidth: "450px"});
 					};
 					bloisSlideShow();
 
@@ -1152,7 +1165,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 																	 '</div>'
 															 '</div>';
 
-					 reims.bindPopup(popupContent, {maxWidth: "auto"});
+					 reims.bindPopup(popupContent, {maxWidth: "450px"});
 				};
 				reimsSlideShow();
 
@@ -1216,7 +1229,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 																		 '</div>'
 																 '</div>';
 
-						 chambord.bindPopup(popupContent, {maxWidth: "auto"});
+						 chambord.bindPopup(popupContent, {maxWidth: "450px"});
 					};
 					chambordSlideShow();
 
@@ -1256,7 +1269,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 					});
 
 					function tournellesSlideShow() {
-						var images= [['./Images/PalaisdesTournelles/Figure-LOC-13.jpg','Here is an example image of Palais des Tournelles with a caption.'],
+						var images= [['./Images/palaisDesTournelles/Figure-LOC-13.jpg','Here is an example image of Palais des Tournelles with a caption.'],
 												['./Images/PalaisdesTournelles/Figure-LOC-14.jpg','Caption 2'],
 												['./Images/PalaisdesTournelles/Figure-LOC-15.jpg','Caption 3'],
 												['./Images/PalaisdesTournelles/Figure-LOC-16.jpeg','Caption 4'],
@@ -1273,17 +1286,21 @@ $('#map').on('click', '.popup .cycle a', function() {
 																					'<div class="caption">' + img[1] +'</div>' +
 																				'</div>';
 										 }
-										 var popupContent =  '<div id="' + "Tournelles" + '" class="popup">' +
+										 var popupContent = L.popup()
+
+										 .setContent('<div id="' + "Tournelles" + '" class="popup">' +
 																		 '<div class="slideshow">' +
 																				 slideshowContent +
 																		 '</div>' +
 																		 '<div class="cycle">' +
 																				 '<a href="#" class="prev">&laquo; Previous</a>' +
 																				 '<a href="#" class="next">Next &raquo;</a>' +
-																		 '</div>'
-																 '</div>';
+																		 '</div>' +
+																 '</div>');
 
 						 palaisDesTournelles.bindPopup(popupContent, {maxWidth: "auto"});
+
+
 					};
 					tournellesSlideShow();
 
@@ -1300,13 +1317,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 
 		//	merging of these sites for turning on/off
 				var pointsOfFocus = L.featureGroup([reims,louvre, coulommiers, chantilly, cateauCambrésis, leCercamp, blois, chambord, palaisDesTournelles, hotels, hotels2, lafayette]).addTo(map);
-				pointsOfFocus.on("click", function (event) {
-				    var clickedMarker = event.layer;
-				    clickedMarker.closePopup();
-						console.log("popup closed");
-						clickedMarker.openPopup();
-						console.log("popup opened");
-				});
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //LAYER CONTROLS////
