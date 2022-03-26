@@ -1269,7 +1269,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 					});
 
 					function tournellesSlideShow() {
-						var images= [['./Images/palaisDesTournelles/Figure-LOC-13.jpg','Here is an example image of Palais des Tournelles with a caption.'],
+						var images= [['./Images/PalaisDesTournelles/Figure-LOC-13.jpg','Here is an example image of Palais des Tournelles with a caption.'],
 												['./Images/PalaisdesTournelles/Figure-LOC-14.jpg','Caption 2'],
 												['./Images/PalaisdesTournelles/Figure-LOC-15.jpg','Caption 3'],
 												['./Images/PalaisdesTournelles/Figure-LOC-16.jpeg','Caption 4'],
