@@ -1011,7 +1011,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 					});
 
 					function chantillySlideShow() {
-						var images= [['./Images/Chantilly/Figure-LOC-30.jpeg','The Château de Chantilly, drawing by J. A. Du Cerceau, c. 1570 (British Museum)'],
+						var images= [['./Images/Chantilly/Figure-LOC-30.jpg','The Château de Chantilly, drawing by J. A. Du Cerceau, c. 1570 (British Museum)'],
 												['./Images/Chantilly/Figure-LOC-31.jpeg','The Château de Chantilly, 1600s (BnF)'],
 
 											];
