@@ -846,9 +846,9 @@ $('#map').on('click', '.popup .cycle a', function() {
 					});
 
 					function coulommiersSlideShow() {
-						var images= [['./Images/Coulommiers/Figure-LOC-34.JPG','Here is an example image of the Coulommiers with a caption.'],
-						            ['./Images/Coulommiers/Figure-LOC-35.jpeg','Caption 2'],
-						            ['./Images/Coulommiers/Figure-LOC-36.jpeg','Caption 3'],
+						var images= [['./Images/Coulommiers/Figure-LOC-34.JPG','The Town of Coulommiers, engraving by C. Chastillon (Wikimedia Commons)'],
+						            ['./Images/Coulommiers/Figure-LOC-35.jpeg','The Château de Coulommiers, drawing by S. de Brosse, c. 1613 (BnF)'],
+						            ['./Images/Coulommiers/Figure-LOC-36.jpeg','Map of the Town of Coulommiers, 1800s (BnF)'],
 
 											];
 								var slideshowContent = '';
@@ -912,8 +912,8 @@ $('#map').on('click', '.popup .cycle a', function() {
 					});
 
 					function cateauCambresisSlideShow() {
-						var images= [['./Images/Cateau-Cambrésis/Figure-LOC-32.jpeg','Here is an example image of the Cateau-Cambrésis with a caption.'],
-												['./Images/Cateau-Cambrésis/Figure-LOC-33.jpg','Caption 2'],
+						var images= [['./Images/CateauCambresis/Figure-LOC-32.jpeg','The Region of Cateau-Cambrésis, map by J.-L. Bolé de Chamlay, c. 1675 (BnF)'],
+												['./Images/CateauCambresis/Figure-LOC-33.jpg','Map of the Town of Cateau-Cambrésis, 1782 (Digital archives from Cateau-Cambrésis)'],
 
 											];
 								var slideshowContent = '';
@@ -1011,7 +1011,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 					});
 
 					function chantillySlideShow() {
-						var images= [['./Images/Chantilly/Figure-LOC-30.jpg','The Château de Chantilly, drawing by J. A. Du Cerceau, c. 1570 (British Museum)'],
+						var images= [['./Images/Chantilly/Figure-LOC-30.jpeg','The Château de Chantilly, drawing by J. A. Du Cerceau, c. 1570 (British Museum)'],
 												['./Images/Chantilly/Figure-LOC-31.jpeg','The Château de Chantilly, 1600s (BnF)'],
 
 											];
@@ -1140,9 +1140,9 @@ $('#map').on('click', '.popup .cycle a', function() {
 				});
 
 				function reimsSlideShow() {
-					var images= [['./Images/Reims/Figure-LOC-37.jpg','Here is an example image of Reims with a caption.'],
-											['./Images/Reims/Figure-LOC-38.jpeg','Caption 2'],
-											['./Images/Reims/Figure-LOC-39.jpeg','Caption 3']
+					var images= [['./Images/Reims/Figure-LOC-37.jpg','The Reims Cathedral, engraving by N. de Son, 1625 (British Museum)'],
+											['./Images/Reims/Figure-LOC-38.jpeg','The Reims Cathedral, drawing by the J. Hardouin-Mansart Agency, c. 1690 (BnF)'],
+											['./Images/Reims/Figure-LOC-39.jpeg','The Reims Cathedral, photo by Agence Rol, 1919 (BnF)']
 										];
 							var slideshowContent = '';
 							for(var i = 0; i < images.length; i++) {
