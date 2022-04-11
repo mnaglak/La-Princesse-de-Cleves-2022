@@ -701,7 +701,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 					});
 
 					function rambouilletSlideShow() {
-						var images= [['./Images/Rambouillet/Figure-LOC-18.jpg','Here is an example image of the Rambouillet with a caption.'],
+						var images= [['./Images/Rambouillet/Figure-LOC-18.jpg','The Ruins of the Hôtel de Rambouillet, drawing by F. A. Pernot, 1800s (Musée Carnavalet)'],
 
 											];
 								var slideshowContent = '';
@@ -771,10 +771,10 @@ $('#map').on('click', '.popup .cycle a', function() {
 
 
 					function scuderySlideShow() {
-						var images= [['./Images/Scudery/Figure-LOC-19.jpg','Here is an example image of the Scudery with a caption.'],
-						            ['./Images/Scudery/Figure-LOC-20.jpg','Caption 2'],
-						            ['./Images/Scudery/Figure-LOC-21.jpg','Caption 3'],
-												['./Images/Scudery/Figure-LOC-22.jpg','Caption 4'],
+						var images= [['./Images/Scudery/Figure-LOC-19.jpg','Photo of a Hôtel Particulier, 1800s-1900s (Musée Carnavalet)'],
+						            ['./Images/Scudery/Figure-LOC-20.jpg','The Hôtel Carnavalet c. 1740, painting by Westermann after N. J.-B. Raguenet, c. 1926 (Musée Carnavalet)'],
+						            ['./Images/Scudery/Figure-LOC-21.jpg','The Hôtel Carnavalet’s Gardens, photo by Lemarc (Musée Carnavalet)'],
+												['./Images/Scudery/Figure-LOC-22.jpg','Photo of the Hôtel Carnavalet’s Gardens, c. 1850-1900 (Musée Carnavalet)'],
 
 											];
 								var slideshowContent = '';
