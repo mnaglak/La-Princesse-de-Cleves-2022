@@ -1202,10 +1202,10 @@ $('#map').on('click', '.popup .cycle a', function() {
 					});
 
 					function chambordSlideShow() {
-						var images= [['./Images/Chambord/Figure-LOC-26.jpg','Here is an example image of Chambord with a caption.'],
-												['./Images/Chambord/Figure-LOC-27.jpeg','Caption 2'],
-												['./Images/Chambord/Figure-LOC-28.jpeg','Caption 3'],
-												['./Images/Chambord/Figure-LOC-29.jpeg','Caption 4']
+						var images= [['./Images/Chambord/Figure-LOC-26.jpg','The Château de Chambord, drawing by J. A. Du Cerceau, c. 1570 (British Museum)'],
+												['./Images/Chambord/Figure-LOC-27.jpeg','The Château de Chambord, drawing by A. F. Van der Meulen, 1600s (BnF)'],
+												['./Images/Chambord/Figure-LOC-28.jpeg','The Château de Chambord, photo by Agence Rol, 1922 (BnF)'],
+												['./Images/Chambord/Figure-LOC-29.jpeg','The Château de Chambord, photo by M. Maillard, 1946 (BnF)']
 
 											];
 								var slideshowContent = '';
