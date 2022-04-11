@@ -1075,9 +1075,9 @@ $('#map').on('click', '.popup .cycle a', function() {
 
 
 					function bloisSlideShow() {
-						var images= [['./Images/Blois/Figure-LOC-23.jpg','Here is an example image of Blois with a caption.'],
-												['./Images/Blois/Figure-LOC-24.jpg','Caption 2'],
-												['./Images/Blois/Figure-LOC-25.jpg','Caption 3']
+						var images= [['./Images/Blois/Figure-LOC-23.jpg','The Château de Blois, drawing by J. A. Du Cerceau, c. 1570 (British Museum)'],
+												['./Images/Blois/Figure-LOC-24.jpg','The Château de Blois, drawing by J. A. Du Cerceau, c. 1570 (British Museum)'],
+												['./Images/Blois/Figure-LOC-25.jpg','The Château de Blois, drawing by J. A. Du Cerceau, c. 1570 (British Museum)']
 											];
 								var slideshowContent = '';
 								for(var i = 0; i < images.length; i++) {
