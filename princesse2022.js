@@ -564,18 +564,16 @@ map.addControl( searchControlPeople );
 					});
 
 function louvreSlideShow() {
-	var images= [['./Images/louvre/Figure-LOC-01.jpeg','Here is an example image of the Louvre with a caption.'],
-	            ['./Images/louvre/Figure-LOC-02.png','Caption 2'],
-	            ['./Images/louvre/Figure-LOC-03.jpg','Caption 3'],
-							['./Images/louvre/Figure-LOC-04.jpg','Caption 4'],
-							['./Images/louvre/Figure-LOC-05.jpg','Caption 5'],
-							['./Images/louvre/Figure-LOC-06.png','Caption 6'],
-							['./Images/louvre/Figure-LOC-07.jpeg','Caption 7'],
-							['./Images/louvre/Figure-LOC-08.jpeg','Caption 8'],
-							['./Images/louvre/Figure-LOC-09.jpeg','Caption 9'],
-							['./Images/louvre/Figure-LOC-10.jpeg','Caption 10'],
-							['./Images/louvre/Figure-LOC-11.jpg','Caption 11'],
-							['./Images/louvre/Figure-LOC-12.jpeg','Caption 12']
+	var images= [['./Images/louvre/Figure-LOC-02.png','Detail of the Louvre, Braun and Hogenberg’s map of Paris, 1578'],
+	            ['./Images/louvre/Figure-LOC-03.jpg','The Louvre, <i>Le Premier Volume des plus Excellents Bâtiments</i> de France by J. A. Du Cerceau, 1576 (Wikimedia Commons)'],
+							['./Images/louvre/Figure-LOC-04.jpg','Drawing of the Louvre, J. A. Du Cerceau, c. 1570 (British Museum)'],
+							['./Images/louvre/Figure-LOC-05.jpg','Louvre’s Caryatids, drawing by J. A. Du Cerceau, c. 1570 (British Museum)'],
+							['./Images/louvre/Figure-LOC-06.png','Detail of the Louvre, Merian’s map of Paris, 1615'],
+							['./Images/louvre/Figure-LOC-07.jpeg','The Louvre Palace, drawing by R. Zeeman, 1656 (BnF)'],
+							['./Images/louvre/Figure-LOC-01.jpeg','The Louvre, engraving by I. Silvestre, 1652 (BnF)'],
+							['./Images/louvre/Figure-LOC-08.jpeg','The Louvre Palace, engraving by I. Silvestre, c. 1650-1655 (BnF)'],
+							['./Images/louvre/Figure-LOC-09.jpeg','The Louvre, c. 1666 (BnF)'],
+							['./Images/louvre/Figure-LOC-10.jpeg','The Louvre, engraving by S. Leclerc, 1677 (BnF)']
 						];
 			var slideshowContent = '';
 	    for(var i = 0; i < images.length; i++) {
