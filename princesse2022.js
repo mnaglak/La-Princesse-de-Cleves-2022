@@ -573,7 +573,7 @@ function louvreSlideShow() {
 							['./Images/louvre/Figure-LOC-01.jpeg','The Louvre, engraving by I. Silvestre, 1652 (BnF)'],
 							['./Images/louvre/Figure-LOC-08.jpeg','The Louvre Palace, engraving by I. Silvestre, c. 1650-1655 (BnF)'],
 							['./Images/louvre/Figure-LOC-09.jpeg','The Louvre, c. 1666 (BnF)'],
-							['./Images/louvre/Figure-LOC-10.jpeg','The Louvre, engraving by S. Leclerc, 1677 (BnF)']
+							['./Images/louvre/Figure-LOC-10.jpeg','The Louvre, engraving by S. Leclerc, 1677 (BnF)'],
 						];
 			var slideshowContent = '';
 	    for(var i = 0; i < images.length; i++) {
@@ -1267,11 +1267,11 @@ $('#map').on('click', '.popup .cycle a', function() {
 					});
 
 					function tournellesSlideShow() {
-						var images= [['./Images/PalaisDesTournelles/Figure-LOC-13.jpg','Here is an example image of Palais des Tournelles with a caption.'],
-												['./Images/PalaisdesTournelles/Figure-LOC-14.jpg','Caption 2'],
-												['./Images/PalaisdesTournelles/Figure-LOC-15.jpg','Caption 3'],
-												['./Images/PalaisdesTournelles/Figure-LOC-16.jpeg','Caption 4'],
-												['./Images/PalaisdesTournelles/Figure-LOC-17.jpeg','Caption 5']
+						var images= [['./Images/PalaisDesTournelles/Figure-LOC-13.jpg','The Tournament at the Palais des Tournelles, engraving by J. Perrissin and J. Tortorel, 1570 (British Museum)'],
+												['./Images/PalaisdesTournelles/Figure-LOC-14.jpg','The Death of Henri II at the Palais des Tournelles, engraving after J. Perrissin and J. Tortorel, 1569-75 (British Museum)'],
+												['./Images/PalaisdesTournelles/Figure-LOC-15.jpg','The Place Royale, engraving by G. Perelle, 1639-95 (British Museum)'],
+												['./Images/PalaisdesTournelles/Figure-LOC-16.jpeg','Map of the Place Royale, 1700s (BnF)'],
+												['./Images/PalaisdesTournelles/Figure-LOC-17.jpeg','Photo of the Place des Vosges, 1913 (BnF)']
 
 
 											];
