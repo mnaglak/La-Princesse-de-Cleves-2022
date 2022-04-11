@@ -1267,7 +1267,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 					});
 
 					function tournellesSlideShow() {
-						var images= [['./Images/PalaisDesTournelles/Figure-LOC-13.jpeg','The Tournament at the Palais des Tournelles, engraving by J. Perrissin and J. Tortorel, 1570 (British Museum)'],
+						var images= [['./Images/PalaisdesTournelles/Figure-LOC-13.jpeg','The Tournament at the Palais des Tournelles, engraving by J. Perrissin and J. Tortorel, 1570 (British Museum)'],
 												['./Images/PalaisdesTournelles/Figure-LOC-14.jpg','The Death of Henri II at the Palais des Tournelles, engraving after J. Perrissin and J. Tortorel, 1569-75 (British Museum)'],
 												['./Images/PalaisdesTournelles/Figure-LOC-15.jpg','The Place Royale, engraving by G. Perelle, 1639-95 (British Museum)'],
 												['./Images/PalaisdesTournelles/Figure-LOC-16.jpeg','Map of the Place Royale, 1700s (BnF)'],
