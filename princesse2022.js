@@ -378,7 +378,7 @@ map.addControl( searchControlPeople );
 	var colorGentilhomme = gentilhomme.fontcolor("#1D8348");
 
 	//This will eventually create the legend will all associated information
-	var legendContent = "The movements of the following characters appear on the interactive map in their respective colors. The filtering boxes on the left side of the map allows you to filter by the part of book, with '1', '2', '3', and '4' as possible choices (top filter), or to view one character's movement at a time (bottom filter). To filter by character, begin typing their name according to the list below, and the name will appear for you to select.<br><br>To start a new filter, click the 'x' button on the right side of the filter box. Note that character movement is not weighted, meaning that character movement that occurs repeatedly back and forth between a location <i>within</i> a single book part is not currently indicated. To see all charcter movement, turn off your filters or refresh the map.<br><br><b><u>Filter by Character</u></b><br>" + colorPrincess + "<br>" + colorPrince + "<br>" + colorNemours + "<br>" + colorCour + "<br>" + colorHenri + "<br>" + colorElisabeth + "<br>" + vidameColor + "<br>"
+	var legendContent = "The movements of the following characters appear on the interactive map in their respective colors. The filtering boxes on the left side of the map allows you to filter by the part of book, with '1', '2', '3', and '4' as possible choices (top filter), or to view one character's movement at a time (bottom filter). To filter by character, begin typing their name according to the list below, and the name will appear for you to select.<br><br>To start a new filter after searching, click the 'x' button on the right side of the filter box. Note that character movement is not weighted, meaning that character movement that occurs repeatedly back and forth between a location <i>within</i> a single book part is not currently indicated. To see all charcter movement, turn off your filters or refresh the map. To turn off character movement or locations of interest, use the check boxes in the upper-right list of layers.<br><br><b><u>Filter by Character</u></b><br>" + colorPrincess + "<br>" + colorPrince + "<br>" + colorNemours + "<br>" + colorCour + "<br>" + colorHenri + "<br>" + colorElisabeth + "<br>" + vidameColor + "<br>"
 	+ colorConnetableMont + "<br>" + colorMarechal + "<br>" + colorLorraine + "<br>" + colorConde + "<br>" + colorRoiNavarre + "<br>"
 	+ colorSavoie + "<br>" + colorAlbe + "<br>" + colorMartigues + "<br>" + colorRadan + "<br>" + colorLignerolles + "<br>" + colorBourbon + "<br>" + colorEspagne + "<br>" + colorGentilhomme + "<br><br>" + "<b><u>Filter by Part<br></u></b>" + "<b style='color:black'>Part 1: _______ (solid line)<br>Part 2: ___  ___ (long dashes)<br>Part 3: ___ ___ _ (long-long-short)<br>Part 4: _ _ _ (short dashes)</b>";
 
@@ -1335,8 +1335,8 @@ $('#map').on('click', '.popup .cycle a', function() {
 			"1598 Ile de France" : ileDeFrance1598,
 			"1570 France" : france1570,
 			"1644 Europe" : europe1644,
-			//"Points of Focus" : pointsOfFocus,
-			//"Character Movements" : characterMovement
+			"Points of Focus" : pointsOfFocus,
+			"Character Movements" : movementGroup
 			};
 
 //Then this created the actual control box
