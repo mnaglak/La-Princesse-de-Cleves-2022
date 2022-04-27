@@ -344,7 +344,7 @@ map.addControl( searchControlPeople );
 	var colorNemours = ducdeNemours.fontcolor("#0000ff"); //blue
 	var laCour = "<b>La Cour</b>";
 	var colorCour = laCour.fontcolor("#A04000"); //brown
-	var henri = "<b>Herni II</b>";
+	var henri = "<b>Henri II</b>";
 	var colorHenri = henri.fontcolor("#000000"); //black
 	var elisabeth = "<b>Élisabeth de France</b>";
 	var colorElisabeth = elisabeth.fontcolor("#85C1E9"); //light blue
@@ -378,7 +378,7 @@ map.addControl( searchControlPeople );
 	var colorGentilhomme = gentilhomme.fontcolor("#1D8348");
 
 	//This will eventually create the legend will all associated information
-	var legendContent = "The movements of the following characters appear on the interactive map in their respective colors. The filtering boxes on the left side of the map allows you to filter by the part of book, with '1', '2', '3', and '4' as possible choices (top filter), or to view one character's movement at a time (bottom filter). To filter by character, begin typing their name according to the list below, and the name will appear for you to select.<br><br>To start a new filter after searching, click the 'x' button on the right side of the filter box. Note that character movement is not weighted, meaning that character movement that occurs repeatedly back and forth between a location <i>within</i> a single book part is not currently indicated. To see all character movement, turn off your filters or refresh the map. To turn off character movement or locations of interest, use the check boxes in the upper-right list of layers.<br><br><b><u>Filter by Character</u></b><br>" + colorPrincess + "<br>" + colorPrince + "<br>" + colorNemours + "<br>" + colorCour + "<br>" + colorHenri + "<br>" + colorElisabeth + "<br>" + vidameColor + "<br>"
+	var legendContent = "The movements of the following characters appear on the interactive map in their respective colors. The filtering boxes on the left side of the map allow you to filter by the part of the novel, with '1', '2', '3', and '4' as possible choices (top filter), or to view a selected character’s movements (bottom filter). To filter by character, begin typing their name according to the list below; the name will appear for selection.<br><br>To start a new filter after a search, click the 'x' button on the right side of the filter box. Note that character movements are not weighted, meaning that the character’s movements that occur repeatedly back and forth between a location <i>within</i> a single part of the novel do not appear. To see all characters’ movements, turn off  filters or refresh the map. To turn off characters’ movements or locations of interest, use the checked boxes in the upper-right list of layers.<br><br><b><u>Filter by Character</u></b><br>" + colorPrincess + "<br>" + colorPrince + "<br>" + colorNemours + "<br>" + colorCour + "<br>" + colorHenri + "<br>" + colorElisabeth + "<br>" + vidameColor + "<br>"
 	+ colorConnetableMont + "<br>" + colorMarechal + "<br>" + colorLorraine + "<br>" + colorConde + "<br>" + colorRoiNavarre + "<br>"
 	+ colorSavoie + "<br>" + colorAlbe + "<br>" + colorMartigues + "<br>" + colorRadan + "<br>" + colorLignerolles + "<br>" + colorBourbon + "<br>" + colorEspagne + "<br>" + colorGentilhomme + "<br><br>" + "<b><u>Filter by Part<br></u></b>" + "<b style='color:black'>Part 1: _______ (solid line)<br>Part 2: ___  ___ (long dashes)<br>Part 3: ___ ___ _ (long-long-short)<br>Part 4: _ _ _ (short dashes)</b>";
 
@@ -398,8 +398,19 @@ map.addControl( searchControlPeople );
 	//Sets the initial left sidebar content for popup pane and sites of interest pane
 		var popupContent = 'Click on a location on the map to receive more information';
 
-		var sitesContent = 'Click on one of the following sites to zoom to the desired location. When you click the location marker on the map, a popup window with images will open and a short description of the location will appear in the left sidebar. Note that Cercamp and Résidence de Lafayette do not have images.' +
-			'<br>' + "<a id='myLink' href='#' onclick='goTo(48.860352821094246, 2.3385858535766606, 15)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Palais du Louvre</b><br><a id='myLink' href='#' onclick='goTo(48.85736700174229,2.3655581474304204, 17)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Palais des Tournelles</b><br><a id='myLink' href='#' onclick='goTo(48.849152831982494, 2.3335892036870893, 15)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Résidence de Lafayette</b><br><a id='myLink' href='#' onclick='goTo(48.86196212502818, 2.3345947265625004, 15)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Hôtel de Rambouillet</b><br><a id='myLink' href='#' onclick='goTo(48.85918110234517, 2.3500013351440434, 14)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Salon de Scudéry</b><br><a id='myLink' href='#' onclick='goTo(48.72358515157852, 3.0514526367187504, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Coulommiers</b><br><a id='myLink' href='#' onclick='goTo(48.058348493290794,1.1604309082031252, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Blois</b><br><a id='myLink' href='#' onclick='goTo(47.94762618352869,1.1343383789062502, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Chambord</b><br><a id='myLink' href='#' onclick='goTo(49.19483004925347, 2.4860000610351567, 13)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Chantilly</b><br><a id='myLink' href='#' onclick='goTo(50.24720490139267, 2.6312255859375004, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Cercamp</b><br><a id='myLink' href='#' onclick='goTo(50.0289165635219, 4.084167480468751, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Cateau-Cambrésis</b><br><a id='myLink' href='#' onclick='goTo(49.1781125831520, 3.9413452148437504 , 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Reims</b>";
+		var sitesContent = 'Click on one of the following sites to zoom in on the chosen  location. Click on the location marker, and a popup window with images will opens and a brief description of the location will appear in the left sidebar.<br><br>' +
+			"<a id='myLink' href='#' onclick='goTo(48.058348493290794,1.1604309082031252, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Blois</b>"+
+			"<br><a id='myLink' href='#' onclick='goTo(50.0289165635219, 4.084167480468751, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Cateau-Cambrésis</b>"+
+			"<br><a id='myLink' href='#' onclick='goTo(50.24720490139267, 2.6312255859375004, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Cercamp</b>"+
+			"<br><a id='myLink' href='#' onclick='goTo(47.94762618352869,1.1343383789062502, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Chambord</b>"+
+			"<br><a id='myLink' href='#' onclick='goTo(49.19483004925347, 2.4860000610351567, 13)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Chantilly</b>"+
+			"<br><a id='myLink' href='#' onclick='goTo(48.72358515157852, 3.0514526367187504, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Coulommiers</b>"+
+			"<br><a id='myLink' href='#' onclick='goTo(48.86196212502818, 2.3345947265625004, 15)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Hôtel de Rambouillet</b>"+
+			"<br><a id='myLink' href='#' onclick='goTo(48.85736700174229,2.3655581474304204, 17)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Palais des Tournelles</b>"+
+			"<br><a id='myLink' href='#' onclick='goTo(48.860352821094246, 2.3385858535766606, 15)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Palais du Louvre</b>" +
+			"<br><a id='myLink' href='#' onclick='goTo(48.849152831982494, 2.3335892036870893, 15)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Quartier de Lafayette</b>"+
+			"<br><a id='myLink' href='#' onclick='goTo(49.1781125831520, 3.9413452148437504 , 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Reims</b>"+
+			"<br><a id='myLink' href='#' onclick='goTo(48.85918110234517, 2.3500013351440434, 14)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Salon de Scudéry</b>";
 
 
 	//sites of interest panel
@@ -634,7 +645,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 /////////////////////////////////////////////////////////////////////////////////////////////
 		//for Lafayette
 		var lafayette = L.marker([48.84908775346996, 2.3335981943120765]);
-			lafayette.bindTooltip("Résidence de Lafayette").openTooltip();
+			lafayette.bindTooltip("Quartier de Lafayette").openTooltip();
 			lafayette.on("click", function (e){
 				lafayetteContent();
 				sidebarLeft.removePanel('popupCont');
@@ -642,7 +653,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 					id: 'popupCont',                     // UID, used to access the panel
 					tab: '<i class="fa fa-comment-alt"></i>',  // content can be passed as HTML string,
 					pane: popupContent,        // DOM elements can be passed, too
-					title: 'Résidence de Lafayette',              // an optional pane header
+					title: 'Quartier de Lafayette',              // an optional pane header
 					position: 'top'
 				});
 				sidebarLeft.open('popupCont');
@@ -661,11 +672,47 @@ $('#map').on('click', '.popup .cycle a', function() {
 			});
 
 
+			function lafayetteSlideShow() {
+				var images= [['./Images/lafayette/lafayette1.jpg','Vue et perspective du Palais d’Orléans, engraving by I. Silvestre, 1640-60 (Musée Carnavalet)'],
+										['./Images/lafayette/lafayette2.png','Photo of the Petit Luxembourg (Google Arts and Culture)'],
+										['./Images/lafayette/lafayette3.png','Detail of the Luxembourg neighborhood, Rochefort’s map of Paris, 1672']
+									];
+						var slideshowContent = '';
+						for(var i = 0; i < images.length; i++) {
+								var img = images[i];
+
+								slideshowContent += '<div class="image' + (i == 0 ? ' active' : '') + '">' +
+																			'<img src="' + img[0] + '" />' +
+																			'<div class="caption">' + img[1] +'</div>' +
+																		'</div>';
+								 }
+								 var popupContent = L.popup()
+
+								 .setContent('<div id="' + "Lafayette" + '" class="popup">' +
+																 '<div class="slideshow">' +
+																		 slideshowContent +
+																 '</div>' +
+																 '<div class="cycle">' +
+																		 '<a href="#" class="prev">&laquo; Previous</a>' +
+																		 '<a href="#" class="next">Next &raquo;</a>' +
+																 '</div>' +
+														 '</div>');
+														 popupContent.update();
+				 lafayette.bindPopup(popupContent, {maxWidth: "auto"
+				 });
+
+			};
+			lafayetteSlideShow();
+
+
+
+
+
 			function lafayetteContent()
 			{
-				popupContent = "<center><h1>Résidence de Lafayette</h1></center><br>" +
-				"Lafayette lived mainly in the rue de Vaugirard, near the Luxembourg Palace. Marie-Madeleine Pioche de La Vergne (1634–93) lived at 48, then at 50, rue de Vaugirard, during her childhood. She became a maiden of honor to Anne of Austria and began to frequent the salons of Paris, including those hosted by the marquise de Rambouillet and Madeleine de Scudéry. Soon after her marriage to the count de Lafayette in 1655, she lived at her husband’s estates in Auvergne; around 1660, she resided primarily at her private residence on the rue de Vaugirard, with a high degree of independence. Members of the nobility, as well as men and women of letters, visited her salon. Among her close friends were the marquise de Sévigné, the duke de La Rochefoucauld, and Henriette d’Angleterre, King Louis XIV’s sister-in-law.<br><br><br>" +
-				"<i>Lafayette a principalement habité dans la rue de Vaugirard, située à proximité du Palais du Luxembourg. Pendant son enfance, Marie-Madeleine Pioche de La Vergne (1634–1693) habite au n<sup>o</sup> 48, puis au n<sup>o</sup> 50, rue de Vaugirard. Elle devient demoiselle d’honneur d’Anne d’Autriche et commence à fréquenter les salons de Paris, dont ceux de la marquise de Rambouillet et de Madeleine de Scudéry. Juste après son mariage avec le comte de Lafayette en 1655, elle habite dans les domaines de son mari en Auvergne. À compter de 1660, elle réside principalement dans son hôtel particulier dans la rue de Vaugirard, affichant son indépendance. Les membres de la noblesse et les gens de lettres fréquentent son salon. La marquise de Sévigné, le duc de La Rochefoucauld et Henriette d’Angleterre, belle-sœur du roi Louis XIV, sont parmi les gens proches de son entourage qui fréquentent le salon de Lafayette.</i>";
+				popupContent = "<center><h1>Quartier de Lafayette</h1></center><br>" +
+				"Marie-Madeleine Pioche de La Vergne (with marriage she would become the countess de Lafayette) lived in the Left Bank area near the present-day Luxembourg Gardens. She was born in the building pictured here as the Palais d’Orléans. At the time of her birth in 1634, the smaller, northern wing of the building was called the Petit Luxembourg palace and was owned by the duchesse d’Aiguillon, niece of the Cardinal de Richelieu. Marie-Madeleine’s mother was in service to the duchess, hence her parents lived in the palace. Later, her parents had two houses built on the rue de Vaugirard, (numbers 48 and 50), where Marie-Madeleine spent her childhood—a sign of the family’s social status and the growing importance of this part of the city. Marie-Madeleine became a maiden of honor to Anne of Austria and began to frequent the salons of Paris, including those hosted by the marquise de Rambouillet and Madeleine de Scudéry. Soon after her marriage to the count de Lafayette in 1655, she lived at her husband’s estates in Auvergne; around 1660, she resided primarily at her private residence on the rue de Vaugirard, with a high degree of independence. Members of the nobility, as well as men and women of letters, visited her salon. Among her close friends were the marquise de Sévigné, the duke de La Rochefoucauld, and Henriette d’Angleterre, King Louis XIV’s sister-in-law.<br><br><br>" +
+				"<i>Marie-Madeleine Pioche de La Vergne (par son mariage avec le comte de Lafayette elle deviendra comtesse de Lafayette) vécut dans le quartier de la rive gauche, près de l’actuel jardin du Luxembourg. Elle est née dans le Palais d’Orléans représenté ici. À l’époque de sa naissance en 1634, l’aile nord du bâtiment, plus petite, s’appelait alors le Petit Luxembourg et appartenait à la duchesse d’Aiguillon, nièce du cardinal de Richelieu. La mère de Marie-Madeleine était au service de la duchesse, c’est pourquoi ses parents vivaient dans le palais. Plus tard, ses parents firent construire deux maisons dans la rue de Vaugirard (n<sup>o</sup> 48 et n<sup>o</sup> 50) où Marie-Madeleine passa son enfance, signe du statut social de la famille et de l’importance croissante de ce quartier de la ville. Marie-Madeleine devient demoiselle d’honneur d’Anne d’Autriche et commence à fréquenter les salons de Paris, dont celui de la marquise de Rambouillet et celui de Madeleine de Scudéry. Juste après son mariage avec le comte de Lafayette en 1655, elle habite dans les domaines de son mari en Auvergne. À compter de 1660, elle réside principalement dans son hôtel particulier dans la rue de Vaugirard, avec un degré élevé d’indépendance. Les membres de la noblesse et les gens de lettres fréquentent son salon. La marquise de Sévigné, le duc de La Rochefoucauld et Henriette d’Angleterre, belle-sœur du roi Louis XIV, sont parmi les gens proches de son entourage qui fréquentent le salon.</i>";
 				return popupContent;
 			};
 
@@ -975,9 +1022,41 @@ $('#map').on('click', '.popup .cycle a', function() {
 						lafayette.setIcon(blueIcon);
 					});
 
+					function cercampSlideShow() {
+						var images= [['./Images/Cercamp/Cercamp1.jpg','Château de Cercamp, old abbatial residence, [in] <i>Bulletin de la commission des antiquités départementales du Pas-de-Calais</i>, T. IV, 1875 (Wikimedia Commons)'],
+												['./Images/Cercamp/Cercamp2.jpg','Château de Cercamp, rest of the convent buildings (Wikimedia Commons)']
+											];
+								var slideshowContent = '';
+								for(var i = 0; i < images.length; i++) {
+										var img = images[i];
+
+										slideshowContent += '<div class="image' + (i == 0 ? ' active' : '') + '">' +
+																					'<img src="' + img[0] + '" />' +
+																					'<div class="caption">' + img[1] +'</div>' +
+																				'</div>';
+										 }
+										 var popupContent = L.popup()
+
+										 .setContent('<div id="' + "Cercamp" + '" class="popup">' +
+																		 '<div class="slideshow">' +
+																				 slideshowContent +
+																		 '</div>' +
+																		 '<div class="cycle">' +
+																				 '<a href="#" class="prev">&laquo; Previous</a>' +
+																				 '<a href="#" class="next">Next &raquo;</a>' +
+																		 '</div>' +
+																 '</div>');
+																 popupContent.update();
+						 leCercamp.bindPopup(popupContent, {maxWidth: "auto"
+						 });
+
+					};
+					cercampSlideShow();
+
+
 				function leCercampcontent() {
-					popupContent = "<center><h1>Cercamp</h1></center><br>Located approximately 158 km (98 miles) from Paris, Cercamp is a hamlet within the municipality of Frévent, in the Hauts-de-France region. The abbey of Cercamp was founded in the twelfth century, but it was partially destroyed during the Hundred Years War (1337–1453). As the novel explains, the representatives of the sovereigns of France and Spain met at the abbey of Cercamp in 1558 to begin the negotiations of the Treaty of Cateau-Cambrésis. At the time of the novel’s plot, Cercamp was located in the Artois region, which belonged to Hapsburg Spain; at the time of the novel’s publication, however, that region belonged to France.<br><br><br>" +
-					"<i>Situé à environ 158 km de Paris, Cercamp est un hameau de la commune de Frévent, dans la région des Hauts-de-France. L’abbaye de Cercamp est fondée au XII<sup>e</sup> siècle mais elle est partiellement détruite pendant la guerre de Cent Ans (1337–1453). Comme le roman l’explique, les représentants des souverains de la France et de l’Espagne se réunissent à l’abbaye de Cercamp en 1558 afin de commencer les négociations du traité du Cateau-Cambrésis. À l’époque de l’intrigue du roman, Cercamp se trouve dans la région d’Artois, appartenant alors aux Habsbourg du royaume espagnol ; cependant, à l’époque de la parution du roman, cette région appartient à la France.</i>"
+					popupContent = "<center><h1>Cercamp</h1></center><br>Located approximately 158 km (98 miles) from Paris, Cercamp is a hamlet within the municipality of Frévent, in the Hauts-de-France region. The abbey of Cercamp was founded in the twelfth century, but it was partially destroyed during the Hundred Years War (1337–1453). The present castle of Cercamp was built in 1740 on the site of this Cistercian abbey. As the novel explains, the representatives of the sovereigns of France and Spain met at the abbey of Cercamp in 1558 to begin the negotiations of the Treaty of Cateau-Cambrésis. At the time of the novel’s plot, Cercamp was located in the Artois region, which belonged to Hapsburg Spain; at the time of the novel’s publication, however, that region belonged to France.<br><br><br>" +
+					"<i>Situé à environ 158 km de Paris, Cercamp est un hameau de la commune de Frévent, dans la région des Hauts-de-France. L’abbaye de Cercamp est fondée au XII<sup>e</sup> siècle mais elle est partiellement détruite pendant la guerre de Cent Ans (1337–1453). L’actuel château de Cercamp est édifié en 1740 sur le site de cette abbaye cistercienne. Comme le roman l’explique, les représentants des souverains de la France et de l’Espagne se réunissent à l’abbaye de Cercamp en 1558 afin de commencer les négociations du traité du Cateau-Cambrésis. À l’époque de l’intrigue du roman, Cercamp se trouve dans la région d’Artois, appartenant alors aux Habsbourg du royaume espagnol ; cependant, à l’époque de la parution du roman, cette région appartient à la France.</i>"
 					return popupContent;
 				};
 
