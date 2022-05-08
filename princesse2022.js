@@ -447,7 +447,7 @@ map.addControl( searchControlPeople );
 
 	//creation of map information panel
 		var mapInformation = "<center><h1>About the Interactive Map</h1></center><br>" +
-		"This interactive map is built using the opensource LeafletJS javascript package, along with plugins allowing for searching (leaflet-search), sidebars (leaflet-sidebar-v2), opacity (leaflet-control-opacity), fullscreen (leaflet-fullscreen), panning and zooming (leaflet-pancontrol) as well as FontAwesome. Historical map underlays may be turned on and off using the menu on the top-right portion of the map; certain maps are only available at certain zoom levels. An opacity functionality is also available to make the historical maps more or less transparent. Historical maps and images appear with permission and/or are not under copyright; sources for images and maps are referenced.<br><br>This map was developed by Matthew Naglak in collaboration with the authors of this critical edition.<br><br><br>" +
+		"This interactive map is built using the opensource LeafletJS javascript package, along with plugins allowing for searching (leaflet-search), sidebars (leaflet-sidebar-v2), opacity (leaflet-control-opacity), fullscreen (leaflet-fullscreen), panning and zooming (leaflet-pancontrol) as well as FontAwesome. Historical map underlays may be turned on and off using the menu on the top-right portion of the map; certain maps are only available at certain zoom levels. An opacity functionality is also available to make the historical maps more or less transparent. Historical maps and images appear with permission and/or are not under copyright; sources for images and maps are referenced.<br><br><br>" +
 		"<center><h1>Historical Maps</h1></center><br>" +
 		"<b>Europe 1644</b>: Blaeu, Willem, <i>Europa Recens Descripta</i>, [atlas map], Amsterdam, Williem Janszoon Blaeu, 1644, 42 cm x 56 cm. <a target='_blank' href='https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~285941~90058459:Europa-recens-descripta-?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:Europa%20Recens%20Descripta;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=1&trs=2'>Link</a><br><br>"+
 		"<b>France 1570</b>: Ortelius, Abraham, <i>Galliae Regni Potentiss: Nova Descriptio. Ioanne Ioliveto Auctore</i>, [atlas map], Antwerp, Gielis Coppens van Diest, 1570, 34 cm x 50 cm. <a target='_blank' href='https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~275240~90048525:-9--Galliae-Regni-Potentiss-?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:Galliae%20Regni;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=0&trs=21'>Link</a><br><br>" +
@@ -465,6 +465,23 @@ map.addControl( searchControlPeople );
 			position: 'bottom'                  // optional vertical alignment, defaults to 'top'
 		};
 		sidebarLeft.addPanel(mapInfoContent);
+
+
+var projectInformation = "The digital mapping interface accompanies the editorial project published by Lever Press: <b><i>La Princesse de Clèves by Lafayette: A Bilingual Pedagogical Edition for the Digital Age</i></b>, eds Hélène E. Bilis, Jean-Vincent Blanchard, David Harrison, and Hélène Visentin.<br><br>" +
+"This digital mapping interface displays several layers of early modern maps—Europe, France, Île de France, Paris—in which major landmarks and spaces, and character movements are delineated.<br><br>" +
+"We built the digital mapping interface with georeferenced historical maps to (1) orient readers and help them acquire a firmer grasp of the geography where <i>La Princesse de Clèves</i> unfolds, (2) picture the places where different events occur and relationships evolve, and (3) map the social and geographic sites of the novel as well as those of Lafayette’s era.<br><br>"+
+"Designed with French language and culture learners in mind, the digital version of <i>La Princesse de Clèves</i> provides a bilingual edition to foreground French literary and linguistic content. It offers students and instructors, hailing from a multiplicity of backgrounds, a variety of pedagogical dossiers with a wide range of resources and approaches for exploring <i>La Princesse de Clèves</i> from new perspectives. The article titled “Geographies of <i>La Princesse de Clèves</i>” in the dossier <i>Mapping Lafayette’s Spaces and Relationships</i> contains some pedagogical activities based on the digital mapping interface.<br><br>" +
+"The editors would like to thank Matthew Naglak, Digital Scholarship Librarian at Boston College, for his technical expertise and Jessica Simon, a junior at Smith College, research assistant to Hélène Visentin.";
+
+
+		var aboutProject = {
+			id: 'aboutProject',
+			tab:'<i class="fas fa-at"></i>',
+			pane: projectInformation,
+			title: 'About',
+			position: 'top'
+		}
+		sidebarLeft.addPanel(aboutProject);
 
 /*	//creation of contact panel
 		var contactContent = "Contact us!";
@@ -534,7 +551,7 @@ map.addControl( searchControlPeople );
 
 		//function resets sidebar content for popup pane
 				function resetSidebarContent(){
-					popupContent = 'Click on a location to receive more information';
+					popupContent = 'Click on a location to receive more information.';
 					return popupContent;
 				};
 
