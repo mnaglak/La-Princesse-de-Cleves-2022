@@ -392,7 +392,6 @@ map.addControl( searchControlPeople );
 		title: 'Characters of Interest',              // an optional pane header
 		position: 'top'                  // optional vertical alignment, defaults to 'top'
 	};
-	sidebarLeft.addPanel(panelContent);
 
 
 	//Sets the initial left sidebar content for popup pane and sites of interest pane
@@ -421,7 +420,6 @@ map.addControl( searchControlPeople );
 			title: 'Sites of Interest',
 			position: 'top'
 		};
-		sidebarLeft.addPanel(sitesOfInterestPane);
 
 
 	//popup info panel
@@ -432,7 +430,6 @@ map.addControl( searchControlPeople );
 			title: 'Additional Information',              // an optional pane header
 			position: 'top'                  // optional vertical alignment, defaults to 'top'
 		};
-		sidebarLeft.addPanel(popup);
 
 
 		//function for zooming to a specific location on the sites of interest pane
@@ -482,6 +479,9 @@ var projectInformation = "The digital mapping interface accompanies the editoria
 			position: 'top'
 		}
 		sidebarLeft.addPanel(aboutProject);
+		sidebarLeft.addPanel(sitesOfInterestPane);
+		sidebarLeft.addPanel(popup);
+		sidebarLeft.addPanel(panelContent);
 
 /*	//creation of contact panel
 		var contactContent = "Contact us!";
