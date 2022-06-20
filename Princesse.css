@@ -73,6 +73,9 @@ border-radius: 5px;
     /*max-height: 400px;*/
     /*width:100%;*/
  }
+
+ .your-class{
+ }
   .popup .slideshow .caption {
 background:#eee;
  padding:10px;
@@ -82,6 +85,13 @@ background:#eee;
  }
  .popup .cycle a.prev { float:left; }
  .popup .cycle a.next { float:right; }
+
+ .leaflet-control-container .leaflet-top, .leaflet-control-container .leaflet-bottom {
+ 	transform: translate3d(0px, 0px, 0px);
+ }
+
+ .leaflet-control-search .search-tooltip {top: -50%; margin-left: 115%}
+
 /*
 .legend {
 background-color: “black”;

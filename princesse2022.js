@@ -25,7 +25,7 @@
 //Here it is set up so that the modern imagery is the lowest, followed by the europe imagery, followed by the france imagery, etc.
 //Just below, when the layers are imported, you'll see that some are put in a specific pane so they don't cover up smaller ones.
 		map.createPane('modern');
-		map.getPane('modern').style.zIndex = 140;
+		map.getPane('modern').style.zIndex = 5;
 
 		map.createPane('iledeFrance');
 		map.getPane('iledeFrance').style.zIndex = 150;
@@ -35,11 +35,12 @@
 
 		map.createPane('europe');
 		map.getPane('europe').style.zIndex = 143;
+
     //Here is where we bring in the different map underlays
     //This first is the modern world imagery, currently called from arcGIS online.
     	var esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     		pane :'modern', attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-    		}).addTo(map);
+			}).addTo(map);
 
 
     //Now we start calling our locally stored and created Tile Maps. For how to tile a map, see the tiling instructions in the tutorial
@@ -150,9 +151,10 @@ movementGroup.addTo(map);
 var searchControlPart = new L.Control.Search({
   layer: L.featureGroup([movementGroup]),
   propertyName: 'Book_Part',
-  textPlaceholder: 'Filter by Part of Book (1-4)',
+  textPlaceholder: 'Filter by Part (1-4)',
   marker: false,
   collapsed: false,
+	position: 'bottomleft',
   zoom: 8,
 	textErr: "Only Book Parts 1-4"
   });
@@ -161,7 +163,7 @@ map.addControl( searchControlPart);
 	searchControlPart.on('search:locationfound', function(e) {
     movementGroup.clearLayers();
 
-    var choicePart = document.getElementById("searchtext28").value;
+    var choicePart = document.getElementById("searchtext20").value;
     var choiceCharacter = document.getElementById("searchtext19").value;
 
     var characterMovement = L.geoJson(movement, { //filter geojson based on user input and record start and stop data and province data
@@ -241,6 +243,7 @@ var searchControlPeople = new L.Control.Search({
   textPlaceholder: 'Filter by Character',
   marker: false,
   collapsed: false,
+	position: 'bottomleft',
   zoom: 8,
 	textErr: "Character not found; see Character List"
 
@@ -252,7 +255,7 @@ map.addControl( searchControlPeople );
     movementGroup.clearLayers();
     //check search boxes for content
     var choiceCharacter = document.getElementById("searchtext19").value;
-    var choicePart = document.getElementById("searchtext28").value;
+    var choicePart = document.getElementById("searchtext20").value;
 
     //filter movement based on search box contents, checking both boxes
     var characterMovement = L.geoJson(movement, { //filter geojson based on user input and record start and stop data and province data
@@ -285,7 +288,7 @@ map.addControl( searchControlPeople );
     //Clear Search, checking if the other search box has content
   }).on('search:cancel', function(e) {
     movementGroup.clearLayers();
-    var choicePart = document.getElementById("searchtext28").value;
+    var choicePart = document.getElementById("searchtext20").value;
     if (choicePart=='') {
     var characterMovement = L.geoJson(movement, { //filter geojson based on user input and record start and stop data and province data
 			style: swapStyle,
@@ -443,9 +446,9 @@ map.addControl( searchControlPeople );
 
 
 	//creation of map information panel
-		var mapInformation = "<center><h1>About the Interactive Map</h1></center><br>" +
-		"This interactive map is built using the opensource LeafletJS javascript package, along with plugins allowing for searching (leaflet-search), sidebars (leaflet-sidebar-v2), opacity (leaflet-control-opacity), fullscreen (leaflet-fullscreen), panning and zooming (leaflet-pancontrol) as well as FontAwesome. Historical map underlays may be turned on and off using the menu on the top-right portion of the map; certain maps are only available at certain zoom levels. An opacity functionality is also available to make the historical maps more or less transparent. Historical maps and images appear with permission and/or are not under copyright; sources for images and maps are referenced.<br><br><br>" +
-		"<center><h1>Historical Maps</h1></center><br>" +
+		var mapInformation = "<center><h3>About the Interactive Map</h3></center>" +
+		"This interactive map is built using the opensource LeafletJS javascript package, along with plugins allowing for searching (leaflet-search), sidebars (leaflet-sidebar-v2), opacity (leaflet-control-opacity), fullscreen (leaflet-fullscreen), panning and zooming (leaflet-pancontrol) as well as FontAwesome. Historical map underlays may be turned on and off using the menu on the top-right portion of the map; certain maps are only available at certain zoom levels. An opacity functionality is also available to make the historical maps more or less transparent. Historical maps and images appear with permission and/or are not under copyright; sources for images and maps are referenced.<br><br>" +
+		"<center><h3>Historical Maps</h3></center>" +
 		"<b>Europe 1644</b>: Blaeu, Willem, <i>Europa Recens Descripta</i>, [atlas map], Amsterdam, Williem Janszoon Blaeu, 1644, 42 cm x 56 cm. <a target='_blank' href='https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~285941~90058459:Europa-recens-descripta-?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:Europa%20Recens%20Descripta;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=1&trs=2'>Link</a><br><br>"+
 		"<b>France 1570</b>: Ortelius, Abraham, <i>Galliae Regni Potentiss: Nova Descriptio. Ioanne Ioliveto Auctore</i>, [atlas map], Antwerp, Gielis Coppens van Diest, 1570, 34 cm x 50 cm. <a target='_blank' href='https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~275240~90048525:-9--Galliae-Regni-Potentiss-?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:Galliae%20Regni;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=0&trs=21'>Link</a><br><br>" +
 		"<b>Île de France 1598</b>: Ortelius, Abraham and Vrients, Jan Baptista, <i>L’Isle de France. Parisiensis Agri Descrip.</i>, [atlas map], Antwerp, Jan Baptista Vrients, 1598, 34 cm x 46 cm. <a target='_blank' href='https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~275581~90048943:-29--L-Isle-de-France-?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no&qvq=q:L%E2%80%99Isle%20de%20France.%20Parisiensis%20Agri%20Descrip.;sort:pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no;lc:RUMSEY~8~1&mi=0&trs=2'>Link</a><br><br>" +
@@ -464,11 +467,11 @@ map.addControl( searchControlPeople );
 		sidebarLeft.addPanel(mapInfoContent);
 
 
-var projectInformation = "The digital mapping interface accompanies the editorial project published by Lever Press: <b><i>La Princesse de Clèves by Lafayette: A Bilingual Pedagogical Edition for the Digital Age</i></b>, eds Hélène E. Bilis, Jean-Vincent Blanchard, David Harrison, and Hélène Visentin.<br><br>" +
-"This digital mapping interface displays several layers of early modern maps—Europe, France, Île de France, Paris—in which major landmarks and spaces, and character movements are delineated.<br><br>" +
-"We built the digital mapping interface with georeferenced historical maps to (1) orient readers and help them acquire a firmer grasp of the geography where <i>La Princesse de Clèves</i> unfolds, (2) picture the places where different events occur and relationships evolve, and (3) map the social and geographic sites of the novel as well as those of Lafayette’s era.<br><br>"+
-"Designed with French language and culture learners in mind, the digital version of <i>La Princesse de Clèves</i> provides a bilingual edition to foreground French literary and linguistic content. It offers students and instructors, hailing from a multiplicity of backgrounds, a variety of pedagogical dossiers with a wide range of resources and approaches for exploring <i>La Princesse de Clèves</i> from new perspectives. The article titled “Geographies of <i>La Princesse de Clèves</i>” in the dossier <i>Mapping Lafayette’s Spaces and Relationships</i> contains some pedagogical activities based on the digital mapping interface.<br><br>" +
-"The editors would like to thank Matthew Naglak, Digital Scholarship Librarian at Boston College, for his technical expertise and Jessica Simon, a junior at Smith College, research assistant to Hélène Visentin.";
+var projectInformation = "This interactive map accompanies the editorial project published by Lever Press: <b><i>La Princesse de Clèves by Lafayette: A Bilingual Pedagogical Edition for the Digital Age</i></b>, eds Hélène E. Bilis, Jean-Vincent Blanchard, David Harrison, and Hélène Visentin.<br><br>" +
++ "The mapping interface displays several layers of early modern maps—Europe, France, Île de France, Paris—in which major landmarks and spaces, and character movements are delineated.<br><br>"
++ "We built the mapping interface with georeferenced historical maps to (1) orient readers and help them acquire a firmer grasp of the geography where <i>La Princesse de Clèves</i> unfolds, (2) picture the places where different events occur and relationships evolve, and (3) map the social and geographic sites of the novel as well as those of Lafayette’s era."
++"Designed with French language and culture learners in mind, the digital version of <i>La Princesse de Clèves</i> provides a bilingual edition to foreground French literary and linguistic content. It offers students and instructors, hailing from a multiplicity of backgrounds, a variety of pedagogical dossiers with a wide range of resources and approaches for exploring <i>La Princesse de Clèves</i> from new perspectives. The article titled “Geographies of <i>La Princesse de Clèves</i>” in the dossier <i>Mapping Lafayette’s Spaces and Relationships</i> contains some pedagogical activities based on this digital mapping interface.<br><br>"
++"The editors would like to thank Matthew Naglak, Digital Scholarship Librarian at Boston College, for his technical expertise and Jessica Simon ’24, research assistant to Hélène Visentin at Smith College.";
 
 
 		var aboutProject = {
@@ -1416,28 +1419,68 @@ $('#map').on('click', '.popup .cycle a', function() {
 //LAYER CONTROLS////
 //List of desired baseMap layers
 //Right now it just includes our modern underlay
-	var baseLayers = {
+	/*var baseLayers = {
 		"Modern Imagery" : esri_WorldImagery
-		};
+	};*/
 
 //Maps put in the overlayMaps variable are check boxes, meaning any variety of them can be turned on at a time
 //Right now it includes all the other maps we have imported, as well as our Points of Focus icon group
 //Note the order the maps are listed here is the order they will appear in the checkbox. The first part of each row is the label to accompany it
-	var overlayMaps = {
+	var fooLayers = {
 			"1575 Paris": paris1578,
 			"1615 Paris" : paris1615,
 			"1652 Paris" : paris1652,
 			"1675 Paris" : paris1675,
-			"1598 Ile de France" : ileDeFrance1598,
+			"1598 France" : ileDeFrance1598,
 			"1570 France" : france1570,
 			"1644 Europe" : europe1644,
-			"Points of Focus" : pointsOfFocus,
-			"Character Movements" : movementGroup
+			"Sites" : pointsOfFocus,
+			"Characters" : movementGroup
 			};
 
-//Then this created the actual control box
-	L.control.layers(baseLayers, overlayMaps, {collapsed: false}).addTo(map);
+			// 1. start with Control
+var fooLegend = L.control({position: 'topright'});
 
+fooLegend.onAdd = function () {
+      var div = L.DomUtil.create('div');
+      // here is Your part:
+      div.innerHTML = "<span class='your-class'><b>Layer Controls</b></span>";
+      return div;
+};
+fooLegend.addTo(map);
+
+var fooCtrl = L.control.layers(null, fooLayers,
+              {collapsed : false, position: 'topright'})
+              .addTo(map);
+
+//
+// Nothing unusual, until now:
+const fooCtrlDiv = fooCtrl.getContainer();
+//fooCtrlDiv.insertBefore(fooLegend.getContainer(), fooCtrlDiv.firstChild);
+
+fooCtrlDiv
+  .querySelector('.leaflet-control-layers-list')
+  .insertBefore(
+    fooLegend.getContainer(),
+    fooCtrlDiv.querySelector('.leaflet-control-layers-list').firstChild
+  );
+
+
+/*var fooLegend = L.control ({position: 'topright'});
+//Then this created the actual control box
+
+fooLegend.onAdd = function () {
+			var divLegend = L.DomUtil.create('div');
+      // here is Your part:
+      divLegend.innerHTML = "<span class='layersTitle'>'Available Layers'</span>";
+      return divLegend;
+};
+
+var fooCtrl = L.control.layers(overlayMaps, null,
+              {collapsed : false, position: 'topright'})
+              .addTo(map);
+var fooCtrlDiv = fooCtrl.getContainer();
+fooCtrlDiv.insertBefore(fooLegend.getContainer(), fooCtrlDiv.firstChild); */
 	//Now we do the same thing for the opacity control box
 	//Here is our list of Layers to be controlled by the Opacity Control Box, again in the proper order
 			var opacityLayers = {
@@ -1452,7 +1495,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 
 
 	//Now we similar create the opacity control box
-			L.control.opacity(
+		var opactiyControl =	L.control.opacity(
 				opacityLayers, //the variable containing all the maps
 				{label: "<b>Opacity</b>", //the label for the box
 				position: 'topright',
