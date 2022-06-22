@@ -400,7 +400,7 @@ map.addControl( searchControlPeople );
 	//Sets the initial left sidebar content for popup pane and sites of interest pane
 		var popupContent = 'Click on a location on the map to receive more information';
 
-		var sitesContent = 'Click on one of the following sites to zoom in on the chosen  location. Click on the location marker, and a popup window with images will opens and a brief description of the location will appear in the left sidebar.<br><br>' +
+		var sitesContent = 'Click on one of the following sites to zoom in on the chosen location. Click on the location marker, and a popup window with images will open and a brief description of the location will appear in the left sidebar.<br><br>' +
 			"<a id='myLink' href='#' onclick='goTo(48.058348493290794,1.1604309082031252, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Blois</b>"+
 			"<br><a id='myLink' href='#' onclick='goTo(50.0289165635219, 4.084167480468751, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Cateau-Cambrésis</b>"+
 			"<br><a id='myLink' href='#' onclick='goTo(50.24720490139267, 2.6312255859375004, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Cercamp</b>"+
@@ -467,11 +467,10 @@ map.addControl( searchControlPeople );
 		sidebarLeft.addPanel(mapInfoContent);
 
 
-var projectInformation = "This interactive map accompanies the editorial project published by Lever Press: <b><i>La Princesse de Clèves by Lafayette: A Bilingual Pedagogical Edition for the Digital Age</i></b>, eds Hélène E. Bilis, Jean-Vincent Blanchard, David Harrison, and Hélène Visentin.<br><br>" +
-+ "The mapping interface displays several layers of early modern maps—Europe, France, Île de France, Paris—in which major landmarks and spaces, and character movements are delineated.<br><br>"
-+ "We built the mapping interface with georeferenced historical maps to (1) orient readers and help them acquire a firmer grasp of the geography where <i>La Princesse de Clèves</i> unfolds, (2) picture the places where different events occur and relationships evolve, and (3) map the social and geographic sites of the novel as well as those of Lafayette’s era."
-+"Designed with French language and culture learners in mind, the digital version of <i>La Princesse de Clèves</i> provides a bilingual edition to foreground French literary and linguistic content. It offers students and instructors, hailing from a multiplicity of backgrounds, a variety of pedagogical dossiers with a wide range of resources and approaches for exploring <i>La Princesse de Clèves</i> from new perspectives. The article titled “Geographies of <i>La Princesse de Clèves</i>” in the dossier <i>Mapping Lafayette’s Spaces and Relationships</i> contains some pedagogical activities based on this digital mapping interface.<br><br>"
-+"The editors would like to thank Matthew Naglak, Digital Scholarship Librarian at Boston College, for his technical expertise and Jessica Simon ’24, research assistant to Hélène Visentin at Smith College.";
+var projectInformation = "This interactive map accompanies the editorial project published by Lever Press: <b>La Princesse de Clèves <i>by Lafayette: A New Translation and Bilingual Pedagogical Edition for the Digital Age</i></b>, eds Hélène E. Bilis, Jean-Vincent Blanchard, David Harrison, and Hélène Visentin.<br><br>" +
+"The mapping interface displays several layers of early modern maps—Europe, France, Île de France, Paris—in which major landmarks and spaces, and character movements are delineated.<br><br>" +
+"We built the mapping interface with georeferenced historical maps to (1) orient readers and help them acquire a firmer grasp of the geography where <i>La Princesse de Clèves</i> unfolds; (2) picture the places where different events occur and relationships evolve; and (3) map the social and geographic sites of the novel as well as those of Lafayette’s era. Designed with French language and culture learners in mind, the digital version of <i>La Princesse de Clèves</i> provides a bilingual edition to foreground French literary and linguistic content. It offers students and instructors, hailing from a multiplicity of backgrounds, a variety of pedagogical dossiers with a wide range of resources and approaches for exploring <i>La Princesse de Clèves</i> from new perspectives. The article titled “Geographies of <i>La Princesse de Clèves</i>” in the dossier <i>Mapping Lafayette’s Spaces and Relationships</i> contains some pedagogical activities based on this digital mapping interface.<br><br>" +
+"The editors would like to thank Matthew Naglak, Digital Scholarship Librarian at Boston College, for his technical expertise and Jessica Simon ’24, research assistant to Hélène Visentin at Smith College.";
 
 
 		var aboutProject = {
