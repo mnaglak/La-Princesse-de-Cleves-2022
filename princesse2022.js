@@ -398,7 +398,7 @@ map.addControl( searchControlPeople );
 
 
 	//Sets the initial left sidebar content for popup pane and sites of interest pane
-		var popupContent = 'Click on a location on the map to receive more information';
+		var popupContent = 'Click on a location on the map to receive more information.';
 
 		var sitesContent = 'Click on one of the following sites to zoom in on the chosen location. Click on the location marker, and a popup window with images will open and a brief description of the location will appear in the left sidebar.<br><br>' +
 			"<a id='myLink' href='#' onclick='goTo(48.058348493290794,1.1604309082031252, 10)'><img src='./Images/marker-icon-blue.png' class='nav-text' height='40' width='25'></a><b>Blois</b>"+
